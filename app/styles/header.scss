@@ -77,6 +77,11 @@
   	}
   	&.bl-header-main-experience {
   		background-color: #000;
+  		.bl-header-wrap {
+  			.navbar-toggle {
+  				background-color: $orange;
+  			}
+  		}
   	}
 }
 
@@ -116,10 +121,15 @@
 	border: none;
 	.nav.navbar-nav {
 		margin: 0;
+		&.bl-navbar-experience {
+			background-color: $gray-darker;
+		}
 		.bl-navbar-divider {
 			display: none;
 		}
 		li {
+			width: 50%;
+			float: left;
 			a {
 				color: #FFF;
 				font-family: "sanchez_bold";
@@ -180,6 +190,16 @@
 					padding-left: $desktop-global-padding;
 	  				padding-right: $desktop-global-padding;
 				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1025px) {
+	.navbar-collapse {
+		.nav.navbar-nav {
+			&.bl-navbar-experience {
+				background-color: transparent;
 			}
 		}
 	}
@@ -279,18 +299,39 @@
 			}
 		}
 		.nav.navbar-nav.bl-navbar-experience {
-			> li {
-				width: 8%;
+			> li:first-child {
+				width: 7.633%;
 			}
-			> li:first-child, li:nth-child(9) {
-				width: 9%;
+			> li:nth-child(2) {
+				width: 7.633%;
 			}
 			> li:nth-child(3) {
-				width: 10%;
+				width: 12.366%;
+				min-width: 110px;
+			}
+			> li:nth-child(4) {
+				width: 8.549%;
+				min-width: 110px;
 			}
 			.bl-navbar-divider {
 				border-left: none;
-				width: 32%;
+				width: 27.480%;
+			}
+			> li:nth-child(6) {
+				width: 6.870%;
+				
+			}
+			> li:nth-child(7) {
+				width: 6.870%;				
+			}
+			> li:nth-child(8) {
+				width: 6.870%;				
+			}
+			> li:nth-child(9) {
+				width: 8.854%;			
+			}
+			> li:nth-child(10) {
+				width: 6.870%;
 			}
 		}
 	}
