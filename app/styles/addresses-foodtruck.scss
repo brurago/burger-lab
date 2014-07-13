@@ -1,0 +1,45 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'compass/utilities/general/clearfix';
+
+.bl-section.bl-section-addresses-foodtruck {
+	background-color: #FFF;
+	padding: 0;
+	> h3 {
+		padding-top: $tablet-global-padding;
+		padding-bottom: $tablet-global-padding;
+		margin-top: 0;
+		margin-bottom: 0;
+		@include sass-arrow(bottom, 20px, #000, 0, #000);
+		position: relative;
+		z-index: 999;
+	}
+	.bl-map-foodtruck {
+		width: 100%;
+		height: 250px;
+	}
+}
+
+// Media queries
+
+@media (min-width: 600px) {
+	.bl-section.bl-section-addresses-foodtruck {
+		h3 {
+			padding-top: $desktop-global-padding;
+			padding-bottom: $desktop-global-padding;
+			@include sass-arrow(bottom, 40px, #000, 0, #000);
+		}
+		.bl-map-foodtruck {
+			height: 400px;
+		}
+	}
+}
+
+
+@media (min-width: 1024px) {
+	.bl-section.bl-section-addresses-foodtruck {
+		.bl-map-foodtruck {
+			height: 600px;
+		}
+	}
+}

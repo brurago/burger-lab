@@ -1,0 +1,44 @@
+@import "variables.scss";
+@import "mixins.scss";
+@import "compass/css3/border-radius";
+@import "compass/css3/transition";
+
+// Scroll Up Button
+
+#scrollUp {
+    bottom: $mobile-global-padding;
+    right: $mobile-global-padding;
+    padding: 10px 20px;
+    font-family: "sanchez_bold";
+    color: #FFF;
+    @include sass-arrow(top, 10px, $gray-light, 1px,  $gray-light);
+    @include border-radius($btn-lg-rounded, $btn-lg-rounded);
+  	@include transition-duration(.1s);
+  	@include transition-timing-function(ease-in);
+    &:hover {
+    	padding: 14px 16px;
+		text-decoration: none;
+		color: #FFF;
+		@include sass-arrow(top, 10px, $gray-light, 4px, #FFF);
+    }
+}
+
+// Custom Buttons
+
+.bl-btn-form {
+    background-color: #000;
+    font-size: 1.2em;
+    font-family: 'sanchez_bold';
+    color: #FFF;
+    &:hover {
+        color: $orange;
+    }
+}
+
+// Media queries
+
+@media (max-width: 767px) {
+    #scrollUp {
+        display: none !important;
+    }
+}

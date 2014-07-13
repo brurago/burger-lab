@@ -1,0 +1,45 @@
+// Tonalidades do laranja principal #f05623
+
+$orange:					#f05623 !default;
+$orange-darker:				darken($orange, 15%) !default;
+$orange-dark:				darken($orange, 5%) !default;
+$orange-light:				lighten($orange, 5%) !default;
+$orange-lighter:			lighten($orange, 10%) !default;
+
+$bg-light:					#f5f2eb;
+
+// Tonalidades de cinza #333333
+
+$gray:						#333;
+$gray-darker:				darken($gray, 10%);
+$gray-dark:					darken($gray, 5%);
+$gray-light:				lighten($gray, 5%);
+$gray-lighter:				lighten($gray, 10%);
+
+// Ajustes de layout
+
+$header-social-height:		42px;
+
+$body-md-max-width:			1200px;
+$body-lg-max-width:			1600px;
+
+
+$mobile-global-padding:		15px; // espaçamento padrão para versão mobile
+$tablet-global-padding:		($mobile-global-padding * 2);
+$desktop-global-padding:	($mobile-global-padding * 4);
+
+$plus-margin:				$mobile-global-padding;
+
+$svg-flames-width:			85px; // largura do svg das chamas
+$svg-flames-height:			56px; // altura do svg das chamas
+
+// Ajustes de tamanho de fonte
+
+$mobile-font-size:			2.5em; // tamanho de fonte padrão para versão mobile
+$tablet-font-size:			($mobile-font-size * 1.2);
+$desktop-font-size:			($mobile-font-size * 1.5);
+
+// Arredondamentos
+
+$btn-rounded:				4px; // usado em botões
+$btn-lg-rounded:			10px; // usado em botões grandes

@@ -1,0 +1,63 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'compass/utilities/general/clearfix';
+
+footer {
+	background-color: #000;
+	.bl-footer-logo {
+		text-align: center;
+		padding-top: $tablet-global-padding;
+		padding-bottom: $tablet-global-padding;
+		img {
+			width: 100%;
+			// max-width: 184px;
+			max-width: 120px;
+			height: auto;
+		}
+	}
+	.bl-footer-copyright {
+		padding: $mobile-global-padding;
+		background-color: $gray;
+		border-bottom: $mobile-global-padding solid $orange;
+		position: relative;
+		div {
+			text-align: center;
+		}
+	}
+	.bl-footer-comunicas {
+		padding-top: $mobile-global-padding;
+	}
+}
+
+// Media queries
+
+@media (min-width: 768px) {
+	footer {
+		.bl-footer-logo {
+			img {
+				max-width: 150px;
+			}
+		}
+		.bl-footer-copyright {
+			border-bottom: $tablet-global-padding solid $orange;
+		}
+		.bl-footer-comunicas {
+			position: absolute;
+			left: $mobile-global-padding;
+			top: $mobile-global-padding;
+			padding-top: 0;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	footer {
+		.bl-footer-logo {
+			padding-top: $desktop-global-padding;
+			padding-bottom: $desktop-global-padding;
+			img {
+				max-width: 200px;
+			}
+		}
+	}
+}

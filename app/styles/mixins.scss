@@ -1,0 +1,130 @@
+@mixin reset-spaces {
+	padding: 0;
+	margin: 0;
+}
+
+@mixin reset-list {
+    list-style: none;
+}
+
+
+// ==========================================================================
+// SASS ARROW CSS
+// by Anderson Juhasc
+// ==========================================================================
+
+
+// @mixin sass-arrow-each
+// ==========================================================================
+
+//
+// selecionador de propriedades
+//
+
+@mixin sass-arrow-each($prop, $cond, $value) {
+    $arrayPosition: "top", "right", "bottom", "left";
+
+    @each $prefix in $arrayPosition {
+        @if ( $prefix == $cond ) {
+            @if ($prop == positions) {
+                #{$prefix}: $value;
+            }
+            @else if ($prop == border) {
+                border-#{$prefix}-color: $value;
+            }
+            @else if ($prop == margin) {
+                margin-#{$prefix}: $value;
+            }
+        }
+    }
+}
+
+
+// @mixin sass-arrow-create
+// ==========================================================================
+
+//
+// cria arrow personalizada
+//
+
+@mixin sass-arrow-create($size, $color, $border-width, $border-color, $position1, $value1, $position2, $value2) {
+    position: relative;
+    background: $color;
+    border: $border-width solid $border-color;
+
+    &:after, &:before {
+
+        @include sass-arrow-each(positions, $position1, $value1);
+
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+
+    }
+
+    &:after {
+
+        @include sass-arrow-each(border, $position1, $color);
+
+        border-width: $size;
+
+        @include sass-arrow-each(positions, $position2, $value2);
+
+        @include sass-arrow-each(margin, $position2, 0px - $size);
+
+    }
+
+    &:before {
+
+        @include sass-arrow-each(border, $position1, $border-color);
+
+        border-width: $size + round(1.41421356 * $border-width);
+
+        @include sass-arrow-each(positions, $position2, $value2);
+
+        @include sass-arrow-each(margin, $position2, 0px - ($size + round(1.41421356 * $border-width)));
+
+    }
+}
+
+
+// @mixin sass-arrow
+// ==========================================================================
+
+//
+// cria arrow padronizada para as posicoes top, right, bottom e left
+// modo de usar: sass-arrow(left, 12px, red, 1px, blue);
+// faca o teste
+//
+
+@mixin sass-arrow($position, $size, $color, $border-width, $border-color){
+
+    @if ($position == top) {
+        @include sass-arrow-create($size, $color, $border-width, $border-color, bottom, 100%, left, 50%);
+    }
+
+    @elseif ($position == right) {
+        @include sass-arrow-create($size, $color, $border-width, $border-color, left, 100%, top, 50%);
+    }
+
+    @elseif ($position == bottom) {
+        @include sass-arrow-create($size, $color, $border-width, $border-color, top, 100%, left, 50%);
+    }
+
+    @elseif ($position == left) {
+        @include sass-arrow-create($size, $color, $border-width, $border-color, right, 100%, top, 50%);
+    }
+
+}
+
+// Dotted spaced
+
+@mixin dotted-spaced($dot-color, $dot-position, $dot-gap) {
+    background-image: linear-gradient(to right, $dot-color 10%, rgba(255, 255, 255, 0) 0%);
+    background-position: $dot-position;
+    background-size: $dot-gap 1px;
+    background-repeat: repeat-x;
+}

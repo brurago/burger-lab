@@ -1,0 +1,81 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'compass/utilities/general/clearfix';
+
+.bl-section-addresses {
+	background: url(../images/background-addresses.jpg) repeat fixed center center #000;
+	.bl-address {
+		margin: 0 auto;
+		margin-bottom: $tablet-global-padding;
+		max-width: 1200px;
+		@include clearfix;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		.bl-address-table {
+			display: table;
+			width: 100%;
+			background-color: $bg-light;
+			.bl-address-burger {
+				background-color: #000;
+				padding: $mobile-global-padding;
+				display: table-cell;
+				width: 160px;
+				vertical-align: middle;
+				text-align: center;
+				.burger {
+					width: 50%;
+					height: auto;
+				}
+			}
+			.bl-address-info {
+				padding: $mobile-global-padding;
+				color: $orange;
+				display: table-cell;
+				vertical-align: top;
+				h3,h4,h5 {
+					font-family: 'sanchez_black_italic';
+					color: $orange;
+				}
+			}
+		}
+		.bl-address-map {
+			iframe {
+				width: 100%;
+				height: 200px;
+			}
+		}
+	}
+}
+
+// Media queries
+
+@media (max-width: 400px) {
+	.bl-address .bl-address-map {
+		iframe {
+			height: 150px !important;
+		}
+	}
+}
+
+@media (min-width: 600px) {
+	.bl-section-addresses {
+		.bl-address {
+			margin-bottom: $desktop-global-padding;
+		}
+	}
+}
+
+
+@media (min-width: 1024px) {
+	.bl-section-addresses {
+		.bl-address {
+			.bl-address-info {
+				h3,h4,h5 {
+				margin-top: $mobile-global-padding;
+				margin-bottom: $mobile-global-padding;
+				}
+			}
+		}
+	}
+}

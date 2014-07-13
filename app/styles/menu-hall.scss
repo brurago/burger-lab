@@ -1,0 +1,78 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'compass/utilities/general/clearfix';
+@import 'compass/css3/images';
+@import "compass/css3/border-radius";
+@import "compass/utilities/sprites";
+@import "hall-of-fame/*.png";
+@include all-hall-of-fame-sprites;
+
+.bl-section-menu-hall {
+	background: url(../images/bg-texture-stain.jpg) fixed repeat;
+	background-size: 512px 512px;
+	ul {
+		@include reset-spaces;
+		@include reset-list;
+		li {
+			text-align: center;
+			margin-bottom: $tablet-global-padding;
+			img {
+				width: 100%;
+				max-width: 300px;
+				height: auto;
+			}
+			p {
+				font-family: 'sanchez_light';
+				font-size: 1.125em;
+				padding: $mobile-global-padding;
+			}
+		}
+	}
+}
+
+// Media queries
+
+
+@media (min-width: 1024px) {
+	.bl-section-menu-hall {
+		ul {
+			li {
+				p {
+					padding: $tablet-global-padding;
+					min-height: 140px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.last-column {
+		> ul {
+			> li {
+				float: left;
+				width: 50%;
+				&:last-child {
+					margin-bottom: 0;
+					p {
+						min-height: 0;
+						padding-bottom: 0;
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+	.last-column {
+		.bl-panel {
+			width: 42.7%;
+			&:first-child {
+				float: left;
+			}
+			&:last-child {
+				float: right;
+				margin-top: $desktop-global-padding !important;
+			}
+		}
+	}
+}

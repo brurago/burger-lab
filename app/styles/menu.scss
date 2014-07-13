@@ -1,0 +1,123 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'compass/utilities/general/clearfix';
+@import 'compass/css3/images';
+@import "compass/css3/border-radius";
+
+.bl-section-menu {
+	background: url(../images/bg-icons-pattern.png) repeat fixed #000;
+	.bl-panels {
+		> div {
+			padding: 0 $mobile-global-padding;
+			.bl-panel {
+				margin: ($desktop-global-padding + $mobile-global-padding) 0;
+				&:first-child {
+					margin-top: $tablet-global-padding;
+				}
+				&:last-child {
+					margin-bottom: ($tablet-global-padding + $mobile-global-padding);
+				}
+			}
+		}
+		> div:last-child {
+			.bl-panel {
+				&:last-child {
+					margin-bottom: $mobile-global-padding;
+				}
+			}
+		}
+	}
+	.bl-panel {
+		border: none;
+		font-family: 'sanchez_black_italic';
+		@include border-radius(20px 20px 0 0, 20px 20px 0 0);
+		background-color: $bg-light;
+		position: relative;
+		text-align: left;
+		.bl-panel-flames {
+			position: absolute;
+			top: -55px;
+			left: 50%;
+			margin-left: -($svg-flames-width / 2);
+			svg {
+				width: $svg-flames-width;
+				height: $svg-flames-height;
+				fill: $orange;
+			}
+		}
+		.panel-heading {
+			@include border-radius(10px 10px 0 0, 10px 10px 0 0);
+			border: none;
+			background-color: $orange;
+			color: #FFF;
+			font-size: 1.875em;
+			padding: $mobile-global-padding;
+			text-align: center;
+		}
+		.panel-body {
+			color: $orange;
+			padding: $mobile-global-padding;
+			font-size: 1.125em;
+			ul {
+				@include reset-list;
+				@include reset-spaces;
+				li {
+					@include dotted-spaced($orange,bottom,10px);
+					padding: $mobile-global-padding 0;
+					&:last-child {
+						background-image: none;
+						padding-bottom: 0;
+					}
+					span {
+						font-family: 'sanchez_light';
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Media queries
+
+@media (min-width: 1024px) {
+	.bl-section-menu {
+		.bl-panels {
+			> div {
+				.bl-panel {
+					margin: ($desktop-global-padding + $tablet-global-padding) $tablet-global-padding;
+					&:first-child {
+						margin-top: 0;
+					}
+					&:last-child {
+						margin-bottom: $tablet-global-padding;
+					}
+				}
+			}
+			> div:last-child {
+				.bl-panel {
+					&:first-child {
+						margin-top: $desktop-global-padding;
+					}
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.bl-section-menu {
+		.bl-panels {
+			> div:last-child {
+				.bl-panel {
+					&:first-child {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+	}
+}

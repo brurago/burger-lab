@@ -1,0 +1,208 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'compass/utilities/general/clearfix';
+@import 'compass/css3/images';
+@import "compass/css3/border-radius";
+
+.bl-section-wrap .bl-section-home {
+	@include background(url(../images/bg-icons-pattern.png) repeat fixed,
+                      radial-gradient($orange, $orange-darker 100%));
+	padding-top: 48px;
+
+	.bl-section-home-start {
+		background-color: #000;
+		&.bl-section-home-start-white {
+			background-color: #FFF;
+		}
+		&.bl-section-home-start-orange {
+			@include background(url(../images/bg-icons-pattern.png) repeat,
+	                      radial-gradient($orange, $orange-darker 100%));
+		}
+		@include reset-spaces;
+		.bl-section-home-gallery {
+			background-color: #000;
+			@include reset-spaces;
+			.bl-main-gallery {
+				li {
+					&.owl-carousel-pic-1 {
+						background-image: url(../images/gallery-photo-burger.jpg);
+					}
+					&.owl-carousel-pic-2 {
+						background-image: url(../images/gallery-photo-burger-05.jpg);
+					}
+					&.owl-carousel-pic-3 {
+						background-image: url(../images/gallery-photo-burger-03.jpg);
+					}
+					&.owl-carousel-pic-4 {
+						background-image: url(../images/gallery-photo-burger-04.jpg);
+					}
+				}
+			}
+			.bl-foodtruck-gallery {
+				li {
+					&.owl-carousel-pic-1 {
+						background-image: url(../images/gallery-photo-truck.jpg);
+					}
+					&.owl-carousel-pic-2 {
+						background-image: url(../images/gallery-photo-truck.jpg);
+					}
+					&.owl-carousel-pic-3 {
+						background-image: url(../images/gallery-photo-truck.jpg);
+					}
+					&.owl-carousel-pic-4 {
+						background-image: url(../images/gallery-photo-truck.jpg);
+					}
+				}
+			}
+		}
+		.bl-section-home-twitter, .bl-section-home-foursquare, .bl-section-home-experience {
+			margin: 0;
+			padding: $mobile-global-padding;
+			h5 {
+				text-align: center;
+			}
+			ul {
+				@include reset-list;
+				margin-top: $mobile-global-padding;
+				padding: 0;
+				li {
+					display: table;
+					width: 100%;
+					padding: 25px 0;
+					@include dotted-spaced(#FFF,bottom,10px);
+					div {
+						display: table-cell;
+						vertical-align: middle;
+					}
+					div:first-child {
+						width: 10%;
+						text-align: center;
+						min-width: 50px;
+					}
+					div:last-child {
+						width: 90%;
+						font-size: 1.125em;
+						span {
+							font-size: .8em;
+							display: block;
+						}
+					}
+					&:first-child {
+						padding-top: 0;
+					}
+					&:last-child {
+						background-image: none;
+						padding-bottom: 0;
+					}
+				}
+			}
+		}
+		.bl-section-home-foursquare {
+			background-color: #FFF;
+			color: #000;
+			h5 {
+				color: $orange;
+			}
+			.bl-foursquare-title {
+				font-size: 3em;
+			}
+		}
+		.bl-section-home-experience {
+		}
+	}
+
+	.bl-section-home-presentation {
+		.bl-section-home-yourway, .bl-section-home-shoppings {
+			padding: 0;
+		}
+		.bl-section-home-yourway {
+			text-align: center;
+			img {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+		}
+		.bl-section-home-shoppings {
+			ul {
+				@include reset-list;
+				@include reset-spaces;
+				font-family: 'sanchez_black_italic';
+				li {
+					@include clearfix;
+					padding-bottom: 10px;
+					span {
+						float: left;
+						display: block;
+						background-color: #000;
+						width: 45px;
+						height: 45px;
+						float: left;
+						font-size: 1.9em;
+						padding: 2px 0 0 11px;
+						margin-right: 10px;
+						@include border-radius(100px, 100px);
+					}
+					i {
+						display: block;
+						padding-top: 12px;
+						word-break: keep-all;
+					}
+				}
+			}
+			p {
+				font-family: 'sanchez_light';
+				font-size: 1.125em;
+			}
+		}
+	}
+}
+
+.bl-section-home-dark {
+	background-color: $orange-dark;
+}
+
+// Media queries
+
+@media (min-width: 768px) {
+	.bl-section-wrap .bl-section-home .bl-section-home-start {
+		.bl-section-home-twitter, .bl-section-home-foursquare, .bl-section-home-experience {
+			padding: $tablet-global-padding;
+			h5 {
+				text-align: left;
+			}
+		}
+	}
+}
+
+@media (max-width: 1999px) {
+	.bl-section-wrap .bl-section-home {
+		.bl-section-home-start {
+			.bl-section-home-twitter {
+				ul {
+					li:nth-child(n+4) {
+						display: none;
+					}
+					li:nth-child(3) {
+						background-image: none;
+						padding-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.bl-section-wrap .bl-section-home {
+		padding-top: 145px;
+		.bl-section-home-start {
+			.bl-section-home-twitter, .bl-section-home-foursquare, .bl-section-home-experience {
+				h5 {
+					margin-top: 0;
+					margin-bottom: $tablet-global-padding;
+				}
+			}
+		}
+	}
+}

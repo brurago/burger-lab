@@ -1,0 +1,698 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Burger Lab Food Truck | Hamburgueria Gourmet</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="favicon.ico">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../bower_components/owlcarousel/owl-carousel/owl.carousel.css">
+        <link rel="stylesheet" href="../bower_components/owlcarousel/owl-carousel/owl.theme.css">
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="../bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIPQEWN0hG3hyNZcTKVkcu4sg90zvhfws"></script>
+
+    </head>
+    <body data-spy="scroll" data-target=".bl-scrollspy" data-offset="170" onload="initialize()">
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header>
+            <!-- Fixed social navbar -->
+            <div class="bl-header-social hidden-xs" role="navigation">
+                <div class="bl-header-container">
+                    <span class="bl-work pull-right">
+                        <a href="#" alt="Trabalhe na Burgerlab">Trabalhe na Lab!</a>
+                    </span>
+                    <a href="https://twitter.com/aburgerlab" target="_blank" class="fa-stack fa-lg bl-twitter pull-right" alt="twitter">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    </a>
+                    <a href="http://instagram.com/burgerlabexperience" target="_blank" class="fa-stack fa-lg bl-instagram pull-right" alt="instagram">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                    </a>
+                    <a href="https://www.facebook.com/aburgerlab" target="_blank" class="fa-stack fa-lg bl-facebook pull-right" alt="facebook">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                    </a>
+                    <a href="https://pt.foursquare.com/v/burger-lab-experience--moema/537697c7498e3b7044696b4a" target="_blank" class="fa-stack fa-lg bl-foursquare pull-right" alt="foursquare">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-foursquare fa-stack-1x fa-inverse"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Fixed social navbar -->
+
+            <!-- Fixed navbar -->
+            <nav class="navbar bl-header-main" role="navigation" data-spy="affix" data-offset-top="42">
+                <div class="bl-header-container bl-scrollspy">
+                    <div class="bl-header-wrap">
+                        <div class="bl-header-nav clearfix">
+                            <button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Navegação compacta</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <h1 class="bl-header-brand bl-header-brand-foodtruck">
+                                <a href="#" alt="Burger Lab | Logotipo">Burger Lab | Gourmet Burgers & Dogs</a>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#home">O Truck</a></li>
+                            <li><a href="#cardapio">Cardápio</a></li>
+                            <li><a href="#galeria">Galeria</a></li>
+                            <li class="bl-navbar-divider"><a href="#"><span>Home</span></a></li>
+                            <li><a href="#localizacao">Localização</a></li>
+                            <li><a href="http://www.burgerlab.com.br/seja-um-franqueado/" target="_blank">Franquia</a></li>
+                            <li class=""><a href="#contato">Contato</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Fixed navbar - End -->
+        </header>
+
+        <section class="bl-section-wrap">
+            <section class="bl-section bl-section-home" id="home">
+                <div class="bl-section-home-start bl-section-home-start-white row">
+                    <div class="bl-section-home-gallery col-xs-12 col-sm-12 col-lg-7">
+                        <!-- Carousel -->
+                        <ul class="bl-foodtruck-gallery owl-carousel">
+                            <li class="owl-carousel-pic-1"><img src="images/gallery-photo-alpha.gif" alt="Foto 1"></li>
+                            <li class="owl-carousel-pic-2"><img src="images/gallery-photo-alpha.gif" alt="Foto 2"></li>
+                            <li class="owl-carousel-pic-3"><img src="images/gallery-photo-alpha.gif" alt="Foto 3"></li>
+                            <li class="owl-carousel-pic-4"><img src="images/gallery-photo-alpha.gif" alt="Foto 4"></li>
+                        </ul>
+                        <!-- Carousel - End -->
+                    </div>
+                    <div class="bl-section-home-foursquare col-xs-12 col-sm-12 col-lg-5">
+                        <h5>Onde estamos hoje?</h5>
+                        <!-- start feedwind code -->
+                        <script type="text/javascript">document.write('<script type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https://' : 'http://') + 'feed.mikle.com/js/rssmikle.js"><\/script>');</script>
+                        <script type="text/javascript">document.write('<script type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https://' : 'http://') + 'feed.mikle.com/js/rssmikle.js"><\/script>');</script><script type="text/javascript">(function() {var params = {rssmikle_url: "https://feeds.foursquare.com/history/NC3VDJGN1HGKIV1YLPYOZWG4RRF2QKYF.rss",rssmikle_frame_width: "300",rssmikle_frame_height: "400",rssmikle_target: "_blank",rssmikle_font: "Verdana, Arial, sans-serif",rssmikle_font_size: "",rssmikle_border: "off",responsive: "on",rssmikle_css_url: "",text_align: "left",text_align2: "left",corner: "off",autoscroll: "off",scrolldirection: "up",scrollstep: "3",mcspeed: "20",sort: "New",rssmikle_title: "off",rssmikle_title_sentence: "",rssmikle_title_link: "",rssmikle_title_bgcolor: "#0066FF",rssmikle_title_color: "#FFFFFF",rssmikle_title_bgimage: "",rssmikle_item_bgcolor: "#FFFFFF",rssmikle_item_bgimage: "",rssmikle_item_title_length: "55",rssmikle_item_title_color: "#FF5400",rssmikle_item_border_bottom: "on",rssmikle_item_description: "on",rssmikle_item_description_length: "150",rssmikle_item_description_color: "#666666",rssmikle_item_date: "gl1",rssmikle_timezone: "America/Sao_Paulo",datetime_format: "%e.%m.%Y %k:%M:%S",rssmikle_item_description_tag: "off",rssmikle_item_description_image_scaling: "off",article_num: "5",rssmikle_item_podcast: "off",keyword_inc: "",keyword_exc: "",};feedwind_show_widget_iframe(params);})();
+                        </script>
+                        <!-- end feedwind code -->
+                    </div>
+                </div>
+                <div class="bl-section-home-presentation bl-container-lg row">
+                    <h3>Nós levamos o Burger Gourmet até você!</h3>
+                    <div class="bl-section-home-yourway col-xs-12 col-lg-7">
+                        <img src="images/picture-main-burger.png" alt="Do seu jeito Burger Lab">
+                    </div>
+                    <div class="bl-section-home-shoppings col-xs-12 col-lg-5">
+                        <h4>Agora na versão Truck!</h4>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4 col-lg-5">
+                                <ul>
+                                    <li>
+                                        <span>1</span>
+                                        <i>Escolha o pão</i>
+                                    </li>
+                                    <li>
+                                        <span>2</span>
+                                        <i>Agora o Burger</i>
+                                    </li>
+                                    <li>
+                                        <span>3</span>
+                                        <i>Depois o queijo</i>
+                                    </li>
+                                    <li>
+                                        <span>4</span>
+                                        <i>Combine os toppings</i>
+                                    </li>
+                                    <li>
+                                        <span>5</span>
+                                        <i>Escolha o acompanhamento</i>
+                                    </li>
+                                    <li>
+                                        <span>6</span>
+                                        <i>E a bebida!</i>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-lg-7">
+                                <p>Os ingredientes são preparados na hora, artesanalmente, de altíssima qualidade, além da sofisticada e exclusiva maionese com pimenta japonesa Ichimi, o creme de cogumelos, o molho de tomates frescos, o adocicado chutney de cebola roxa e muito mais!</p>
+                                <p>A fórmula secreta do blend da carne do Chef foi minuciosamente desenvolvida por uma equipe gourmet "viciada em hamburguer" para extrair o melhor sabor possível, sendo composto de 5 cortes nobres especiais.</p>
+                            </div>
+                        </div>
+                        <h6><i>Agora é só escolher abaixo e detonar!</i></h6>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="bl-section bl-section-menu">
+                <div class="bl-container-lg">
+                    <h3 id="menu" class="uppercase">Cardápio</h3>
+                    <div class="bl-panels row">
+                        <div class="col-xs-12 col-md-6 col-lg-4">
+                            <div class="bl-panel panel panel-default">
+                                <div class="bl-panel-flames">
+                                    <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="116px" height="77px" viewBox="0 0 116.157 77.392" enable-background="new 0 0 116.157 77.392" xml:space="preserve">
+                                        <path d="M116.157,77.392c-6.087-14.299-18.297-24.261-8.245-34.718c0,0-10.969,3.74-11.633,13.759c-0.662,10.033,6.688,14.929,1.886,18.45c-7.195,5.218-31.175-2.022-11.278-24.812c0,0-1.707-22.446-23.435-34.123c0,0,11.123,23.986,0,26.94C46.563,47.382,43.151,18.158,59.469,0c0,0-31.593,9.799-33.505,40.987c-0.898,14.158,5.479,26.87-5.191,27.598c-4.905,0.351-7.077-8.549-2.55-15.093c0,0-12.552,4.663-18.223,23.9H116.157z"/>
+                                    </svg>
+                                </div> 
+                                <div class="panel-heading uppercase">Pão</div>
+                                <div class="panel-body">
+                                    <ul>
+                                        <li>
+                                            Clássico
+                                        </li>
+                                        <li>Integral</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bl-panel panel panel-default">
+                                <div class="bl-panel-flames">
+                                    <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="116px" height="77px" viewBox="0 0 116.157 77.392" enable-background="new 0 0 116.157 77.392" xml:space="preserve">
+                                        <path d="M116.157,77.392c-6.087-14.299-18.297-24.261-8.245-34.718c0,0-10.969,3.74-11.633,13.759c-0.662,10.033,6.688,14.929,1.886,18.45c-7.195,5.218-31.175-2.022-11.278-24.812c0,0-1.707-22.446-23.435-34.123c0,0,11.123,23.986,0,26.94C46.563,47.382,43.151,18.158,59.469,0c0,0-31.593,9.799-33.505,40.987c-0.898,14.158,5.479,26.87-5.191,27.598c-4.905,0.351-7.077-8.549-2.55-15.093c0,0-12.552,4.663-18.223,23.9H116.157z"/>
+                                    </svg>
+                                </div>
+                                <div class="panel-heading uppercase">Hamburguer</div>
+                                <div class="panel-body">
+                                    <ul>
+                                        <li>Bovino</li>
+                                        <li>
+                                            Super Secreto
+                                            <span>Blend bovino e bacon</span>
+                                        </li>
+                                        <li>Costela</li>
+                                        <li>Frango empanado</li>
+                                        <li>Vegetariano</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bl-panel panel panel-default">
+                                <div class="bl-panel-flames">
+                                    <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="116px" height="77px" viewBox="0 0 116.157 77.392" enable-background="new 0 0 116.157 77.392" xml:space="preserve">
+                                        <path d="M116.157,77.392c-6.087-14.299-18.297-24.261-8.245-34.718c0,0-10.969,3.74-11.633,13.759c-0.662,10.033,6.688,14.929,1.886,18.45c-7.195,5.218-31.175-2.022-11.278-24.812c0,0-1.707-22.446-23.435-34.123c0,0,11.123,23.986,0,26.94C46.563,47.382,43.151,18.158,59.469,0c0,0-31.593,9.799-33.505,40.987c-0.898,14.158,5.479,26.87-5.191,27.598c-4.905,0.351-7.077-8.549-2.55-15.093c0,0-12.552,4.663-18.223,23.9H116.157z"/>
+                                    </svg>
+                                </div>
+                                <div class="panel-heading uppercase">Queijo</div>
+                                <div class="panel-body">
+                                    <ul>
+                                        <li>Cheddar</li>
+                                        <li>Prato</li>
+                                        <li>Catupiry</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6 col-lg-4">
+                            <div class="bl-panel panel panel-default">
+                                <div class="bl-panel-flames">
+                                    <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="116px" height="77px" viewBox="0 0 116.157 77.392" enable-background="new 0 0 116.157 77.392" xml:space="preserve">
+                                        <path d="M116.157,77.392c-6.087-14.299-18.297-24.261-8.245-34.718c0,0-10.969,3.74-11.633,13.759c-0.662,10.033,6.688,14.929,1.886,18.45c-7.195,5.218-31.175-2.022-11.278-24.812c0,0-1.707-22.446-23.435-34.123c0,0,11.123,23.986,0,26.94C46.563,47.382,43.151,18.158,59.469,0c0,0-31.593,9.799-33.505,40.987c-0.898,14.158,5.479,26.87-5.191,27.598c-4.905,0.351-7.077-8.549-2.55-15.093c0,0-12.552,4.663-18.223,23.9H116.157z"/>
+                                    </svg>
+                                </div>
+                                <div class="panel-heading uppercase">Toppings</div>
+                                <div class="panel-body">
+                                    <ul>
+                                        <li>Maionese Tradicional</li>
+                                        <li>
+                                            Maionese Ichiomi
+                                            <span>Especialidade Burger Lab</span>
+                                        </li>
+                                        <li>Maionese de limão siciliano</li>
+                                        <li>Maionese francesa de olho (aioli)</li>
+                                        <li>Maionese de mostarda</li>
+                                        <li>Cebola Roxa mariana no azeite</li>
+                                        <li>Chutney adocicado de cebola roxa</li>
+                                        <li>Geléia de bacon com abacaxi</li>
+                                        <li>Sautee de cogumelos</li>
+                                        <li>Bacon</li>
+                                        <li>Tomate</li>
+                                        <li>Alface</li>
+                                        <li>Picles</li>
+                                        <li>Rúcula</li>
+                                        <li>Barbecue</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-12 col-lg-4 last-column">
+                            <div class="bl-panel panel panel-default">
+                                <div class="bl-panel-flames">
+                                    <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="116px" height="77px" viewBox="0 0 116.157 77.392" enable-background="new 0 0 116.157 77.392" xml:space="preserve">
+                                        <path d="M116.157,77.392c-6.087-14.299-18.297-24.261-8.245-34.718c0,0-10.969,3.74-11.633,13.759c-0.662,10.033,6.688,14.929,1.886,18.45c-7.195,5.218-31.175-2.022-11.278-24.812c0,0-1.707-22.446-23.435-34.123c0,0,11.123,23.986,0,26.94C46.563,47.382,43.151,18.158,59.469,0c0,0-31.593,9.799-33.505,40.987c-0.898,14.158,5.479,26.87-5.191,27.598c-4.905,0.351-7.077-8.549-2.55-15.093c0,0-12.552,4.663-18.223,23.9H116.157z"/>
+                                    </svg>
+                                </div>
+                                <div class="panel-heading uppercase">Porção</div>
+                                <div class="panel-body">
+                                    <ul>
+                                        <li>
+                                            Batatas fritas belga
+                                            <span>A melhor batata do mundo</span>
+                                        </li>
+                                        <li>
+                                            Batatas rústicas
+                                            <span>Com sal grosso e alecrim</span>
+                                        </li>
+                                        <li>
+                                            Onion Rings
+                                            <span>Super crocante e fininhas</span>
+                                        </li>
+                                        <li>
+                                            Porção meio a meio
+                                            <span>Super crocante e fininhas</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bl-panel panel panel-default">
+                                <div class="bl-panel-flames">
+                                    <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="116px" height="77px" viewBox="0 0 116.157 77.392" enable-background="new 0 0 116.157 77.392" xml:space="preserve">
+                                        <path d="M116.157,77.392c-6.087-14.299-18.297-24.261-8.245-34.718c0,0-10.969,3.74-11.633,13.759c-0.662,10.033,6.688,14.929,1.886,18.45c-7.195,5.218-31.175-2.022-11.278-24.812c0,0-1.707-22.446-23.435-34.123c0,0,11.123,23.986,0,26.94C46.563,47.382,43.151,18.158,59.469,0c0,0-31.593,9.799-33.505,40.987c-0.898,14.158,5.479,26.87-5.191,27.598c-4.905,0.351-7.077-8.549-2.55-15.093c0,0-12.552,4.663-18.223,23.9H116.157z"/>
+                                    </svg>
+                                </div>
+                                <div class="panel-heading uppercase">Bebida</div>
+                                <div class="panel-body">
+                                    <ul>
+                                        <li>Lorem ipsum dolor</li>
+                                        <li>
+                                            Lorem ipsum dolor
+                                            <span>Beatae facere corrupti porro magnam expedita</span>
+                                        </li>
+                                        <li>Lorem ipsum dolor</li>
+                                        <li>Lorem ipsum dolor</li>
+                                        <li>Lorem ipsum dolor</li>
+                                        <li>Deserunt voluptatibus maiore</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bl-section bl-section-menu-hall">
+                <div class="bl-container-lg">
+                    <h3 id="cardapio" class="uppercase">Burger Lab's Hall da Fama</h3>
+                    <div class="bl-panels row">
+                        <div class="col-xs-12 col-md-6 col-lg-4">
+                            <ul>
+                                <li>
+                                    <img src="images/hall-of-fame-alpha.gif" alt="Super Classic" class="hall-of-fame-super-classic">
+                                    <p>Burger bovino, quejo prato, chutney adocicado de cebola roxa, barbecue e maionese tradicional.</p>
+                                </li>
+                                <li>
+                                    <img src="images/hall-of-fame-alpha.gif" alt="The Highway" class="hall-of-fame-the-highway">
+                                    <p>Burger super secreto, queijo cheddar, bacon, cebola roxa marinada no zeite, alface e maionese fancesa de alho.</p>
+                                </li>
+                                <li>
+                                    <img src="images/hall-of-fame-alpha.gif" alt="Road's Chicken" class="hall-of-fame-roads-chicken">
+                                    <p>Burger de frango empanado, catupiry, falface, tomate e maionese de mostarda.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-md-6 col-lg-4">
+                            <ul>
+                                <li>
+                                    <img src="images/hall-of-fame-alpha.gif" alt="The Bronx" class="hall-of-fame-the-bronx">
+                                    <p>Burger bovino, quejo cheddar, bacon, cebola roxa marinada no azeite, saute de cogumelos e maionese tradicional.</p>
+                                </li>
+                                <li>
+                                    <img src="images/hall-of-fame-alpha.gif" alt="Burger Lab Boss" class="hall-of-fame-boss">
+                                    <p>Burger de costela, queijo prato, bacon, alface, tomate e maionese de limão siciliano.</p>
+                                </li>
+                                <li>
+                                    <img src="images/hall-of-fame-alpha.gif" alt="Chicken & Chicken" class="hall-of-fame-chicken-chicken">
+                                    <p>Burger de frango empanado, queijo prato, chutney adocicado de cebola roxa, picles e barbecue.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-md-12 col-lg-4 last-column">
+                            <ul>
+                                <li>
+                                    <img src="images/hall-of-fame-alpha.gif" alt="Casanova" class="hall-of-fame-casanova">
+                                    <p>Burger super secreto, queijo prato, geléia de bacon com abacaxi, alface e tomate.</p>
+                                </li>
+                                <li>
+                                    <img src="images/hall-of-fame-alpha.gif" alt="My Precious" class="hall-of-fame-my-precious">
+                                    <p>Burger de costela, queijo cheddar, alface, tomate, chebola roxa marinada no azeite e maionese de ichimi.</p>
+                                </li>
+                                <li>
+                                    <img src="images/hall-of-fame-alpha.gif" alt="Vegetariano" class="hall-of-fame-vegetariano">
+                                    <p>Burger vegetariano, queijo prato, alface, tomate e maionese tradicional.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h6>Curtiu nossos Burgers? Convide seus amigos!</h6>
+                    <div class="text-center">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.burgerlab.com.br/" target="_blank" class="btn btn-lg btn-social btn-facebook">
+                            <i class="fa fa-facebook"></i>
+                            Compartilhar <span class="hidden-xs">com amigos</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bl-section bl-section-gallery">
+                <div class="bl-container-lg">
+                    <h3 id="galeria" class="uppercase">Galeria</h3>
+                    <div class="bl-panel panel">
+                        <div class="bl-panel-flames">
+                            <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="116px" height="77px" viewBox="0 0 116.157 77.392" enable-background="new 0 0 116.157 77.392" xml:space="preserve">
+                                <path d="M116.157,77.392c-6.087-14.299-18.297-24.261-8.245-34.718c0,0-10.969,3.74-11.633,13.759c-0.662,10.033,6.688,14.929,1.886,18.45c-7.195,5.218-31.175-2.022-11.278-24.812c0,0-1.707-22.446-23.435-34.123c0,0,11.123,23.986,0,26.94C46.563,47.382,43.151,18.158,59.469,0c0,0-31.593,9.799-33.505,40.987c-0.898,14.158,5.479,26.87-5.191,27.598c-4.905,0.351-7.077-8.549-2.55-15.093c0,0-12.552,4.663-18.223,23.9H116.157z"/>
+                            </svg>
+                        </div>
+                        <div class="panel-heading uppercase">Nossos Burgers</div>
+                        <div class="panel-body">
+                            <!-- Gallery -->
+                            <ul class="owl-gallery">
+                                <li><img src="images/gallery-photo-burger-07.jpg" alt=""></li>
+                                <li><img src="images/gallery-photo-burger-08.jpg" alt=""></li>
+                                <li><img src="images/gallery-photo-burger-09.jpg" alt=""></li>
+                                <li><img src="images/gallery-photo-burger-10.jpg" alt=""></li>
+                                <li><img src="images/gallery-photo-burger-02.jpg" alt=""></li>
+                                <li><img src="images/gallery-photo-burger-03.jpg" alt=""></li>
+                                <li><img src="images/gallery-photo-burger-04.jpg" alt=""></li>
+                                <li><img src="images/gallery-photo-burger-05.jpg" alt=""></li>
+                                <li><img src="images/gallery-photo-burger-06.jpg" alt=""></li>
+                            </ul>
+                            <!-- Gallery - End -->
+                        </div>
+                    </div>
+                    <h6 class="plus1x-margin-bottom">Quer ver sua foto em nossa galeria?</h6>
+                    <p class="text-center plus2x-margin-bottom">Envie a foto do seu Burger com #tonaburgerlab</p>
+                    <div class="text-center">
+                        <a href="http://instagram.com/burgerlab" target="_blank" class="btn btn-lg btn-social btn-instagram">
+                            <i class="fa fa-instagram"></i>
+                            Instagram
+                        </a>
+                        <a href="https://pt.foursquare.com/v/burger-lab-experience--moema/537697c7498e3b7044696b4a" target="_blank" class="btn btn-lg btn-social btn-vimeo">
+                            <i class="fa fa-foursquare"></i>
+                            Foursquare
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bl-section bl-section-addresses-foodtruck">
+                <h3 id="localizacao" class="uppercase">Localização</h3>
+                <div id="map_canvas" class="bl-map-foodtruck"></div>
+            </section>
+
+            <section class="bl-section bl-section-contact">
+                <div class="bl-container-lg">
+                    <h3 id="contato" class="uppercase">Contato</h3>
+                    <div class="bl-form row">
+                        <div class="bl-form-contact col-xs-12 col-md-6">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="inputName">Seu nome</label>
+                                    <input type="email" class="form-control input-lg" id="inputName" placeholder="Digite o seu nome">
+                                    <div class="alert alert-danger" role="alert">
+                                        <small><strong>Atenção:</strong> o seu nome precisa ter entre 5 e 40 caracteres.</small>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputEmail">Seu e-mail</label>
+                                    <input type="email" class="form-control input-lg" id="inputEmail" placeholder="Digite o seu e-mail">
+                                    <div class="alert alert-danger" role="alert">
+                                        <small><strong>Atenção:</strong> entre com um formato válido de e-mail</small>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputEmail">Sua mensagem</label>
+                                    <textarea name="message" id="textareaMessage" rows="10" class="form-control input-lg" placeholder="Digite a sua mensagem"></textarea>
+                                    <div class="alert alert-danger" role="alert">
+                                        <small><strong>Atenção:</strong> sua mensagem precisa ter entre 20 e 300 caracteres.</small>
+                                    </div>
+                                </div>
+                                <div class="alert alert-success bl-alert-sucess" role="alert">
+                                    Formulário enviado com sucesso! <br>
+                                    <small>A Burger Lab agradece o seu contato.</small>
+                                </div>
+                                <button type="submit" class="btn btn-lg bl-btn-form">Enviar</button>
+                            </form>
+                        </div>
+                        <div class="bl-form-newsletter col-xs-12 col-md-6">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="inputEmailNewsletter">Nossa newsletter</label>
+                                    <p class="plus2x-margin-bottom">Que tal receber  novidades, promoções  da Burger Lab em primeira mão? Cadastre-se agora!</p>
+                                    <input type="email" class="form-control input-lg" id="inputEmailNewsletter" placeholder="Digite o seu e-mail">
+                                    <div class="alert alert-danger" role="alert">
+                                        <small><strong>Atenção:</strong> entre com um formato válido de e-mail</small>
+                                    </div>
+                                </div>
+                                <div class="alert alert-success bl-alert-sucess" role="alert">
+                                    E-mail cadastrado com sucesso! <br>
+                                    <small>A Burger Lab agradece o seu interesse.</small>
+                                </div>
+                                <button type="submit" class="btn btn-lg bl-btn-form">Assinar</button>
+                            </form>
+                            <h6 class="plus3x-margin-top plus2x-margin-bottom">Venha conversar com a gente!</h6>
+                            <div class="bl-form-social">
+                                <a href="https://twitter.com/aburgerlab" target="_blank" class="fa-stack fa-3x bl-twitter" alt="twitter">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </a>
+                                <a href="http://instagram.com/burgerlabexperience" target="_blank" class="fa-stack fa-3x bl-instagram" alt="instagram">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                                </a>
+                                <a href="https://www.facebook.com/aburgerlab" target="_blank" class="fa-stack fa-3x bl-facebook" alt="facebook">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </a>
+                                <a href="https://pt.foursquare.com/v/burger-lab-experience--moema/537697c7498e3b7044696b4a" target="_blank" class="fa-stack fa-3x bl-foursquare" alt="foursquare">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-foursquare fa-stack-1x fa-inverse"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>            
+        </section>
+
+        <footer>
+            <div class="bl-footer-logo">
+                <img src="images/logo-burgerlab-inverted.svg" alt="Burger Lab | Logotipo">
+            </div>
+            <div class="bl-footer-copyright">
+                <div>
+                    <i>Todos os direitos reservados <strong>Burger Lab</strong>.</i>
+                </div>
+                <div class="bl-footer-comunicas">
+                    <i>by <a href="http://www.comunicas.com.br/" target="_blank">Comunicas</a></i>
+                </div>
+            </div>
+        </footer>
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <!-- build:js scripts/plugins.js -->
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/popover.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js"></script>
+        <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>
+        <script src="../bower_components/scrollup/js/jquery.scrollUp.js"></script>
+        <script src="../bower_components/owlcarousel/owl-carousel/owl.carousel.js"></script>
+        <script src="../bower_components/instafeed.js/instafeed.js"></script>
+        <script src="tweetie/tweetie.js"></script>
+        
+        <!-- endbuild -->
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+
+        <script>
+        // Script para googlemaps
+            function initialize() {
+                var mapOptions = {
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    scrollwheel: false,
+                    styles: [
+                        {
+                            'featureType': 'road',
+                            'elementType': 'labels',
+                            'stylers': [
+                                {
+                                    'visibility': 'simplified'
+                                }
+                            ]
+                        },
+                        {
+                            'featureType': 'administrative.land_parcel',
+                            'elementType': 'all',
+                            'stylers': [
+                                {
+                                    'visibility': 'off'
+                                }
+                            ]
+                        },
+                        {
+                            'featureType': 'landscape.man_made',
+                            'elementType': 'all',
+                            'stylers': [
+                                {
+                                    'visibility': 'off'
+                                }
+                            ]
+                        },
+                        {
+                            'featureType': 'transit',
+                            'elementType': 'all',
+                            'stylers': [
+                                {
+                                    'visibility': 'off'
+                                }
+                            ]
+                        },
+                        {
+                            'featureType': 'road.local',
+                            'elementType': 'labels',
+                            'stylers': [
+                                {
+                                    'visibility': 'simplified'
+                                }
+                            ]
+                        },
+                        {
+                            'featureType': 'road.local',
+                            'elementType': 'geometry',
+                            'stylers': [
+                                {
+                                    'visibility': 'simplified'
+                                }
+                            ]
+                        },
+                        {
+                            'featureType': 'road.highway',
+                            'elementType': 'labels',
+                            'stylers': [
+                                {
+                                    'visibility': 'simplified'
+                                }
+                            ]
+                        },
+                        {
+                            'featureType': 'poi',
+                            'elementType': 'labels',
+                            'stylers': [
+                                {
+                                    'visibility': 'on'
+                                }
+                            ]
+                        },
+                        {
+                            'featureType': 'road.arterial',
+                            'elementType': 'labels',
+                            'stylers': [
+                                {
+                                    'visibility': 'on'
+                                }
+                            ]
+                        },
+                        {
+                            'featureType': 'water',
+                            'elementType': 'all',
+                            'stylers': [
+                                {
+                                    'hue': '#000'
+                                }
+                            ]
+                        },
+                        {
+                            'featureType': 'road.highway',
+                            'elementType': 'geometry',
+                            'stylers': [
+                                {
+                                    'hue': '#ef7f22'
+                                }
+                            ]
+                        },
+                        {
+                            'featureType': 'road.arterial',
+                            'elementType': 'geometry',
+                            'stylers': [
+                                {
+                                    'hue': '#f04c16'
+                                }
+                            ]
+                        }
+                    ]
+                };
+
+                var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+
+                // Array contento todos os marcadores criados
+                var MarcadoresLista = new Array (new google.maps.LatLng(-23.545 , -46.638333),
+                    new google.maps.LatLng(-23.5992062 , -46.6834874),
+                    new google.maps.LatLng(-23.5641843 , -46.6055854));
+                //  Create a new viewpoint bound
+                var bounds = new google.maps.LatLngBounds ();
+
+                //  Go through each...
+                for (var i = 0, LtLgLen = MarcadoresLista.length; i < LtLgLen; i++) {
+                    //  And increase the bounds to take this point
+                    bounds.extend (MarcadoresLista[i]);
+                }
+
+                var icone = 'images/05051e2d.map-marker.svg';
+
+                var marker0 = new google.maps.Marker({
+                    position: MarcadoresLista[0],
+                    map: map,
+                    icon: icone
+                });
+
+                var marker1 = new google.maps.Marker({
+                    position: MarcadoresLista[1],
+                    map: map,
+                    icon: icone
+                });
+
+                var marker2 = new google.maps.Marker({
+                    position: MarcadoresLista[2],
+                    map: map,
+                    icon: icone
+                });
+
+                //  Fit these bounds to the map
+                map.fitBounds (bounds);
+            }
+        </script>
+    </body>
+</html>

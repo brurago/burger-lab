@@ -1,0 +1,99 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'compass/utilities/general/clearfix';
+@import 'compass/css3/images';
+@import "compass/css3/border-radius";
+
+.bl-section-gallery {
+	@include background(url(../images/bg-icons-pattern.png) repeat fixed,
+    			radial-gradient($orange, $orange-darker 100%));
+	.bl-panel {
+		border: none;
+		font-family: 'sanchez_black_italic';
+		@include border-radius(20px 20px 0 0, 20px 20px 0 0);
+		background-color: #FFF;
+		position: relative;
+		text-align: left;
+		margin-top: ($desktop-global-padding + $mobile-global-padding);
+		.bl-panel-flames {
+			position: absolute;
+			top: -55px;
+			left: 50%;
+			margin-left: -($svg-flames-width / 2);
+			svg {
+				width: $svg-flames-width;
+				height: $svg-flames-height;
+				fill: #000;
+			}
+		}
+		.panel-heading {
+			@include border-radius(10px 10px 0 0, 10px 10px 0 0);
+			border: none;
+			background-color: #000;
+			color: #FFF;
+			font-size: 1.875em;
+			padding: $mobile-global-padding;
+			text-align: center;
+		}
+		.panel-body {
+			@include reset-spaces;
+			background-color: #000;
+			.row {
+				@include reset-spaces;
+				div {
+					padding: 0;
+					a {
+						img {
+							width: 100%;
+							height: auto;
+						}
+					}
+				}
+			}
+		}
+	}
+	.bl-panel-instagram {
+		.bl-panel-flames {
+			svg {
+				fill: $orange-darker;
+			}
+		}
+		.panel-heading {
+			background-color: $orange-darker;
+			.fa {
+				padding-top: 5px;
+			}
+		}
+	}
+}
+
+.owl-gallery, .owl-carousel {
+	@include reset-list;
+	@include reset-spaces;
+	li {
+		@include reset-spaces;
+		max-height: 590px;
+		background-repeat: repeat;
+		background-size: 100% auto;
+		background-position: center center;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+// Media queries
+
+@media (max-width: 400px) {
+	.btn-social {
+		display: block;
+		width: 100%;
+		margin-bottom: $mobile-global-padding;
+	}
+}
+
+
+// @media (min-width: 1024px) {
+	
+// }

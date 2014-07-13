@@ -1,0 +1,34 @@
+// $icon-font-path: '../../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/';
+$fa-font-path: '../../bower_components/font-awesome/fonts/';
+
+// bower:scss
+@import '../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss';
+@import '../../bower_components/bootstrap-social/bootstrap-social.scss';
+// endbower
+
+
+@import 'fonts.scss';
+
+@import 'variables.scss';
+
+@import 'elements.scss';
+
+@import 'buttons.scss';
+
+@import 'header.scss';
+
+@import 'home.scss';
+
+@import 'menu.scss';
+
+@import 'menu-hall.scss';
+
+@import 'gallery.scss';
+
+@import 'addresses.scss';
+
+@import 'addresses-foodtruck.scss';
+
+@import 'contact.scss';
+
+@import 'footer.scss';
