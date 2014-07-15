@@ -7,8 +7,10 @@
 .bl-section-wrap .bl-section-home {
 	@include background(url(../images/bg-icons-pattern.png) repeat fixed,
                       radial-gradient($orange, $orange-darker 100%));
-	padding-top: 48px;
-
+	padding-top: 0;
+	&.bl-section-home-black {
+		background: url(../images/bg-icons-pattern.png) repeat fixed #000;
+	}
 	.bl-section-home-start {
 		background-color: #000;
 		&.bl-section-home-start-white {
@@ -53,6 +55,50 @@
 						background-image: url(../images/gallery-photo-truck.jpg);
 					}
 				}
+			}
+		}
+		.bl-experience-gallery {
+			.carousel-inner {
+				.item {
+					> img {
+						width: 100%;
+						height: auto;
+					}
+					.carousel-caption {
+						h4,h5,h6 {
+							margin-top: 0;
+							margin-bottom: 0;
+							font-size: 1em;
+						}
+						h6 {
+							font-size: .9em;
+							font-family: 'sanchez_regularregular';
+							font-style: italic;
+						}
+						h4 + h6 {
+							margin-top: 1em;
+						}
+						.btn {
+
+						}
+					}
+				}
+			}
+			.carousel-control {
+				width: 10%;
+				.fa {
+					position: absolute;
+					top: 50%;
+					font-size: 1.4em;
+					margin-top: -14px;
+				}
+				&.right {
+					text-align: left;
+					padding-left: 2%;
+				}
+			}
+			.carousel-indicators {
+				bottom: 0;
 			}
 		}
 		.bl-section-home-twitter, .bl-section-home-foursquare, .bl-section-home-experience {
@@ -107,12 +153,10 @@
 				font-size: 3em;
 			}
 		}
-		.bl-section-home-experience {
-		}
 	}
 
 	.bl-section-home-presentation {
-		.bl-section-home-yourway, .bl-section-home-shoppings {
+		.bl-section-home-yourway, .bl-section-home-shoppings, .bl-section-home-experience {
 			padding: 0;
 		}
 		.bl-section-home-yourway {
@@ -123,7 +167,7 @@
 				display: block;
 			}
 		}
-		.bl-section-home-shoppings {
+		.bl-section-home-shoppings, .bl-section-home-experience {
 			ul {
 				@include reset-list;
 				@include reset-spaces;
@@ -155,6 +199,15 @@
 				font-size: 1.125em;
 			}
 		}
+		.bl-section-home-experience {
+			ul {
+				li {
+					span {
+						background-color: $orange;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -172,6 +225,93 @@
 				text-align: left;
 			}
 		}
+		.bl-experience-gallery {
+			.carousel-inner {
+				.item {
+					.carousel-caption {
+						h4,h5,h6 {
+							font-size: 1.2em;
+							margin-bottom: 0;
+						}
+						h6 {
+							font-size: 1em;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.bl-section-wrap .bl-section-home .bl-section-home-start {
+		.bl-experience-gallery {
+			.carousel-inner {
+				.item {
+					> img {
+						width: 50%;
+						height: auto;
+					}
+					.carousel-caption {
+						left: 50%;
+						top: 0;
+						bottom: auto;
+						margin-left: $tablet-global-padding;
+						h4,h5,h6 {
+							text-align: left;
+							text-shadow: none;
+							font-size: 2em;
+							margin-top: .3em;
+							margin-bottom: .6em;
+						}
+						h6 {
+							line-height: 1.4em;
+							font-size: 1.3em;
+						}
+					}
+				}
+			}
+			.carousel-control {
+				.fa {
+					font-size: 2.5em;
+					margin-top: -25px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.bl-section-wrap .bl-section-home {
+		padding-top: 145px;
+		.bl-section-home-start {
+			.bl-section-home-twitter, .bl-section-home-foursquare, .bl-section-home-experience {
+				h5 {
+					margin-top: 0;
+					margin-bottom: $tablet-global-padding;
+				}
+			}
+			.bl-experience-gallery {
+				.carousel-inner {
+					min-height: 340px;
+					.item {
+						> img {
+						}
+						.carousel-caption {
+							right: 5%;
+							max-width: 500px;
+							h4 {
+								font-size: 2.625em;
+							}
+							h6 {
+								line-height: 1.6em;
+								font-size: 1.6875em;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -187,20 +327,6 @@
 						background-image: none;
 						padding-bottom: 0;
 					}
-				}
-			}
-		}
-	}
-}
-
-@media (min-width: 1200px) {
-	.bl-section-wrap .bl-section-home {
-		padding-top: 145px;
-		.bl-section-home-start {
-			.bl-section-home-twitter, .bl-section-home-foursquare, .bl-section-home-experience {
-				h5 {
-					margin-top: 0;
-					margin-bottom: $tablet-global-padding;
 				}
 			}
 		}

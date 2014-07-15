@@ -4,6 +4,9 @@
 
 .bl-section-addresses {
 	background: url(../images/background-addresses.jpg) repeat fixed center center #000;
+	&.bl-section-addresses-experience {
+		background: url(../images/background-addresses-experience.jpg) repeat fixed top center #000;
+	}
 	.bl-address {
 		margin: 0 auto;
 		margin-bottom: $tablet-global-padding;

@@ -29,7 +29,7 @@
 
         <header>
             <!-- Fixed social navbar -->
-            <div class="bl-header-social bl-header-social-experience hidden-xs" role="navigation">
+            <div class="bl-header-social bl-header-social-experience visible-lg-block" role="navigation">
                 <div class="bl-header-container">
                     <span class="bl-work pull-right">
                         <a href="#" alt="Trabalhe na Burgerlab">Trabalhe na Lab!</a>
@@ -90,30 +90,60 @@
         </header>
 
         <section class="bl-section-wrap">
-            <section class="bl-section bl-section-home" id="home">
+            <section class="bl-section bl-section-home bl-section-home-black" id="home">
                 <div class="bl-section-home-start bl-section-home-start-orange row">
-                    <div class="bl-section-home-gallery col-xs-12 col-sm-12 col-lg-7">
-                        <!-- Carousel -->
-                        <ul class="bl-main-gallery owl-carousel">
-                            <li class="owl-carousel-pic-1"><img src="images/gallery-photo-alpha.gif" alt="Foto 1"></li>
-                            <li class="owl-carousel-pic-2"><img src="images/gallery-photo-alpha.gif" alt="Foto 2"></li>
-                            <li class="owl-carousel-pic-3"><img src="images/gallery-photo-alpha.gif" alt="Foto 3"></li>
-                            <li class="owl-carousel-pic-4"><img src="images/gallery-photo-alpha.gif" alt="Foto 4"></li>
-                        </ul>
-                        <!-- Carousel - End -->
-                    </div>
-                    <div class="bl-section-home-experience col-xs-12 col-sm-12 col-lg-5">
-                        <h5>Porções especiais</h5>
-                        <p>Nosso bacon artesanal empanado em forma de cubo. Uma exclusividade da Burger Lab experience.</p>
+                    <div id="carousel-experience" class="bl-experience-gallery carousel slide" data-ride="carousel" data-pause="hover" data-interval="10000">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-experience" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-experience" data-slide-to="1"></li>
+                            <li data-target="#carousel-experience" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="images/gallery-photo-bacon.jpg" alt="Bacon">
+                                <div class="carousel-caption">
+                                    <h4>Porções especiais</h4>
+                                    <h6 class="hidden-xs">Nosso bacon artesanal empanado em forma de cubo. Uma exclusividade da Burger Lab Experience.</h6>
+                                    <button class="btn btn-lg bl-btn-form pull-left visible-lg-block">Veja o cardápio</button>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="images/gallery-photo-bacon.jpg" alt="Bacon">
+                                <div class="carousel-caption">
+                                    <h4>Molhos incríveis</h4>
+                                    <h6 class="hidden-xs">Uma seleção de molhos gourmet: chutney, chimichurri, aioli e outras 12 combinações.</h6>
+                                    <button class="btn btn-lg bl-btn-form pull-left visible-lg-block">Veja o cardápio</button>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="images/gallery-photo-bacon.jpg" alt="Bacon">
+                                <div class="carousel-caption">
+                                    <h4>Batatas selecionadas</h4>
+                                    <h6 class="hidden-xs">Nossas deliciosas batatas fritas em 3 sabores: belga, doce e rústica com alecrim.</h6>
+                                    <button class="btn btn-lg bl-btn-form pull-left visible-lg-block">Veja o cardápio</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-experience" role="button" data-slide="prev">
+                            <span class="fa fa-chevron-left"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-experience" role="button" data-slide="next">
+                            <span class="fa fa-chevron-right"></span>
+                        </a>
                     </div>
                 </div>
-                <div class="bl-section-home-presentation bl-container-lg row">
-                    <h3>1º hamburgueria gourmet fast-food do Brasil.</h3>
+                <div class="bl-section-home-presentation bl-presentation-experience bl-container-lg row">
+                    <h3>Você monta seu Burger como quiser e na hora!</h3>
                     <div class="bl-section-home-yourway col-xs-12 col-lg-7">
                         <img src="images/picture-main-burger.png" alt="Do seu jeito Burger Lab">
                     </div>
-                    <div class="bl-section-home-shoppings col-xs-12 col-lg-5">
-                        <h4>Nos melhores shoppings!</h4>
+                    <div class="bl-section-home-experience col-xs-12 col-lg-5">
+                        <h4>Loja conceito da rede Burger Lab!</h4>
                         <div class="row">
                             <div class="col-xs-12 col-sm-4 col-lg-5">
                                 <ul>
@@ -144,8 +174,8 @@
                                 </ul>
                             </div>
                             <div class="col-xs-12 col-sm-8 col-lg-7">
-                                <p>Os ingredientes são preparados na hora, artesanalmente, de altíssima qualidade, além da sofisticada e exclusiva maionese com pimenta japonesa Ichimi, o creme de cogumelos, o molho de tomates frescos, o adocicado chutney de cebola roxa e muito mais!</p>
-                                <p>A fórmula secreta do blend da carne do Chef foi minuciosamente desenvolvida por uma equipe gourmet "viciada em hamburguer" para extrair o melhor sabor possível, sendo composto de 5 cortes nobres especiais.</p>
+                                <p>Você monta seu sanduíche como quiser e na hora. Escolhe o tipo de pão, o hamburger, o queijo, os ingredientes extras e a porção de acompanhamento. Tudo muito fresco e exclusivo, como nosso blend secreto de carne bovina, nossas maioneses caseiras e nosso homemade barbecue.</p>
+                                <p>Criamos também o Empório Burger Lab, é uma loja inédita no Brasil feita exclusivamente ao amante de hambúrguer, aqui você encontra queijos diferenciados,  pães, trufas e cervejas importadas com dicas de harmonização.</p>
                             </div>
                         </div>
                         <h6><i>Agora é só escolher abaixo e detonar!</i></h6>
@@ -153,7 +183,7 @@
                 </div>
             </section>
             
-            <section class="bl-section bl-section-menu">
+            <section class="bl-section bl-section-menu bl-section-menu-orange">
                 <div class="bl-container-lg">
                     <h3 id="menu" class="uppercase">Cardápio</h3>
                     <div class="bl-panels row">
@@ -169,8 +199,20 @@
                                     <ul>
                                         <li>
                                             Clássico
+                                            <span>Pão com gergelim</span>
                                         </li>
-                                        <li>Integral</li>
+                                        <li>
+                                            Integral
+                                            <span>Farinha integral e fibras</span>
+                                        </li>
+                                        <li>
+                                            Sírio
+                                            <span>Levemente adocicado</span>
+                                        </li>
+                                        <li>
+                                            Australiano
+                                            <span>Pão escuro levemente adocicado</span>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -183,14 +225,39 @@
                                 <div class="panel-heading uppercase">Hamburguer</div>
                                 <div class="panel-body">
                                     <ul>
-                                        <li>Bovino</li>
+                                        <li>
+                                            Blend Bovino Especial
+                                            <span>Combinação dos melhores cortes da raça Red Angus</span>
+                                        </li>
                                         <li>
                                             Super Secreto
-                                            <span>Blend bovino e bacon</span>
+                                            <span>Nosso blend bovino especial misturado com Bacon Artesanal Burger Lab</span>
                                         </li>
-                                        <li>Costela</li>
-                                        <li>Frango empanado</li>
-                                        <li>Vegetariano</li>
+                                        <li>Costela
+                                            <span>Blend de costela bovina 100% Red Angus criado pela Burger Lab Experience</span>
+                                        <li>
+                                            Frango empanado
+                                            <span>Marinado com ervas frescas, mostarda Heinz e azeite extra-virgem</span>
+                                        </li>
+                                        <li>
+                                            Vegetariano
+                                            <span>Hambúguer de proteína de soja, berinjela, cenoura, salmão, vagem e escarola</span>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li class="bl-panel-body-subtitle">
+                                            Turbine seu burger:
+                                        </li>
+                                        <li>
+                                            Burger Defumado
+                                            <span>Opção para todos os Burgers exceto Frango.</span>
+                                        </li>
+                                        <li>Extra Burger
+                                            <span>Para nossos burger de 180g exceto Kobe</span>
+                                        <li>
+                                            Burger de Kobe
+                                            <span>Burger de 180g da raça Wagyu, considerada a melhor carne do mundo</span>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -203,9 +270,20 @@
                                 <div class="panel-heading uppercase">Queijo</div>
                                 <div class="panel-body">
                                     <ul>
-                                        <li>Cheddar</li>
-                                        <li>Prato</li>
-                                        <li>Catupiry</li>
+                                        <li>
+                                            Queijo Burger Lab
+                                            <span>Queijo amarelo selecionado pela Burger Lab, suave e delicado</span>
+                                        </li>
+                                        <li>
+                                            Cheddar
+                                            <span>Alaranjado e de consistência firme, receita inglesa original</span>
+                                        </li>
+                                        <li>Meia cura mineiro
+                                            <span>Meia cura é uma expessão mineira  que quer dizer nem fresco nem curado.</span>
+                                        <li>
+                                            Gouda
+                                            <span>De origem holandesa a Gouda é um queijo amarelo adocicado e textura macia</span>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -220,24 +298,63 @@
                                 <div class="panel-heading uppercase">Toppings</div>
                                 <div class="panel-body">
                                     <ul>
-                                        <li>Maionese Tradicional</li>
-                                        <li>
-                                            Maionese Ichiomi
-                                            <span>Especialidade Burger Lab</span>
-                                        </li>
-                                        <li>Maionese de limão siciliano</li>
-                                        <li>Maionese francesa de olho (aioli)</li>
-                                        <li>Maionese de mostarda</li>
-                                        <li>Cebola Roxa mariana no azeite</li>
-                                        <li>Chutney adocicado de cebola roxa</li>
-                                        <li>Geléia de bacon com abacaxi</li>
-                                        <li>Sautee de cogumelos</li>
-                                        <li>Bacon</li>
-                                        <li>Tomate</li>
-                                        <li>Alface</li>
-                                        <li>Picles</li>
+                                        <li>Alface americana</li>
                                         <li>Rúcula</li>
-                                        <li>Barbecue</li>
+                                        <li>Tomate</li>
+                                        <li>Picles</li>
+                                        <li>Cebola roxa mariana no azeite</li>
+                                        <li>Chutney adocicado de cebola roxa</li>
+                                        <li>Bacon artesanal Burger Lab</li>
+                                        <li>Sautee de mix de cogumelos frescos</li>
+                                        <li>Geléia de bacon com abacaxi</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bl-panel panel panel-default">
+                                <div class="bl-panel-flames">
+                                    <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="116px" height="77px" viewBox="0 0 116.157 77.392" enable-background="new 0 0 116.157 77.392" xml:space="preserve">
+                                        <path d="M116.157,77.392c-6.087-14.299-18.297-24.261-8.245-34.718c0,0-10.969,3.74-11.633,13.759c-0.662,10.033,6.688,14.929,1.886,18.45c-7.195,5.218-31.175-2.022-11.278-24.812c0,0-1.707-22.446-23.435-34.123c0,0,11.123,23.986,0,26.94C46.563,47.382,43.151,18.158,59.469,0c0,0-31.593,9.799-33.505,40.987c-0.898,14.158,5.479,26.87-5.191,27.598c-4.905,0.351-7.077-8.549-2.55-15.093c0,0-12.552,4.663-18.223,23.9H116.157z"/>
+                                    </svg>
+                                </div>
+                                <div class="panel-heading uppercase">Molhos</div>
+                                <div class="panel-body">
+                                    <ul>
+                                        <li>Smoked barbecue premium</li>
+                                        <li>Red hot Burger Lab spicy sauce</li>
+                                        <li>Molho secreto de blue cheese</li>
+                                        <li>***conferir texto***</li>
+                                        <li>***conferir texto***</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bl-panel panel panel-default">
+                                <div class="bl-panel-flames">
+                                    <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="116px" height="77px" viewBox="0 0 116.157 77.392" enable-background="new 0 0 116.157 77.392" xml:space="preserve">
+                                        <path d="M116.157,77.392c-6.087-14.299-18.297-24.261-8.245-34.718c0,0-10.969,3.74-11.633,13.759c-0.662,10.033,6.688,14.929,1.886,18.45c-7.195,5.218-31.175-2.022-11.278-24.812c0,0-1.707-22.446-23.435-34.123c0,0,11.123,23.986,0,26.94C46.563,47.382,43.151,18.158,59.469,0c0,0-31.593,9.799-33.505,40.987c-0.898,14.158,5.479,26.87-5.191,27.598c-4.905,0.351-7.077-8.549-2.55-15.093c0,0-12.552,4.663-18.223,23.9H116.157z"/>
+                                    </svg>
+                                </div>
+                                <div class="panel-heading uppercase">Maioneses</div>
+                                <div class="panel-body">
+                                    <ul>
+                                        <li>Temperada</li>
+                                        <li>Francesa</li>
+                                        <li>Ichimi</li>
+                                        <li>Wassabi</li>
+                                        <li>Tangerina com manjericão</li>
+                                        <li>Mostarda de Dijon</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bl-panel panel panel-default">
+                                <div class="bl-panel-flames">
+                                    <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="116px" height="77px" viewBox="0 0 116.157 77.392" enable-background="new 0 0 116.157 77.392" xml:space="preserve">
+                                        <path d="M116.157,77.392c-6.087-14.299-18.297-24.261-8.245-34.718c0,0-10.969,3.74-11.633,13.759c-0.662,10.033,6.688,14.929,1.886,18.45c-7.195,5.218-31.175-2.022-11.278-24.812c0,0-1.707-22.446-23.435-34.123c0,0,11.123,23.986,0,26.94C46.563,47.382,43.151,18.158,59.469,0c0,0-31.593,9.799-33.505,40.987c-0.898,14.158,5.479,26.87-5.191,27.598c-4.905,0.351-7.077-8.549-2.55-15.093c0,0-12.552,4.663-18.223,23.9H116.157z"/>
+                                    </svg>
+                                </div>
+                                <div class="panel-heading uppercase">Kids</div>
+                                <div class="panel-body">
+                                    <ul>
+                                        <li>Mini Burger Lab</li>
                                     </ul>
                                 </div>
                             </div>
@@ -254,19 +371,15 @@
                                     <ul>
                                         <li>
                                             Batatas fritas belga
-                                            <span>A melhor batata do mundo</span>
                                         </li>
                                         <li>
                                             Batatas rústicas
-                                            <span>Com sal grosso e alecrim</span>
+                                        </li>
+                                        <li>
+                                            Batata doce frita
                                         </li>
                                         <li>
                                             Onion Rings
-                                            <span>Super crocante e fininhas</span>
-                                        </li>
-                                        <li>
-                                            Porção meio a meio
-                                            <span>Super crocante e fininhas</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -277,18 +390,57 @@
                                         <path d="M116.157,77.392c-6.087-14.299-18.297-24.261-8.245-34.718c0,0-10.969,3.74-11.633,13.759c-0.662,10.033,6.688,14.929,1.886,18.45c-7.195,5.218-31.175-2.022-11.278-24.812c0,0-1.707-22.446-23.435-34.123c0,0,11.123,23.986,0,26.94C46.563,47.382,43.151,18.158,59.469,0c0,0-31.593,9.799-33.505,40.987c-0.898,14.158,5.479,26.87-5.191,27.598c-4.905,0.351-7.077-8.549-2.55-15.093c0,0-12.552,4.663-18.223,23.9H116.157z"/>
                                     </svg>
                                 </div>
-                                <div class="panel-heading uppercase">Bebida</div>
+                                <div class="panel-heading uppercase">Porção Especial</div>
                                 <div class="panel-body">
                                     <ul>
-                                        <li>Lorem ipsum dolor</li>
                                         <li>
-                                            Lorem ipsum dolor
-                                            <span>Beatae facere corrupti porro magnam expedita</span>
+                                            Jalapeño com chilli de carne e bacon
                                         </li>
-                                        <li>Lorem ipsum dolor</li>
-                                        <li>Lorem ipsum dolor</li>
-                                        <li>Lorem ipsum dolor</li>
-                                        <li>Deserunt voluptatibus maiore</li>
+                                        <li>
+                                            Bacon terura cubes
+                                        </li>
+                                        <li>
+                                            Magic balls
+                                        </li>
+                                        <li>
+                                            Vegetariano
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bl-panel panel panel-default">
+                                <div class="bl-panel-flames">
+                                    <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="116px" height="77px" viewBox="0 0 116.157 77.392" enable-background="new 0 0 116.157 77.392" xml:space="preserve">
+                                        <path d="M116.157,77.392c-6.087-14.299-18.297-24.261-8.245-34.718c0,0-10.969,3.74-11.633,13.759c-0.662,10.033,6.688,14.929,1.886,18.45c-7.195,5.218-31.175-2.022-11.278-24.812c0,0-1.707-22.446-23.435-34.123c0,0,11.123,23.986,0,26.94C46.563,47.382,43.151,18.158,59.469,0c0,0-31.593,9.799-33.505,40.987c-0.898,14.158,5.479,26.87-5.191,27.598c-4.905,0.351-7.077-8.549-2.55-15.093c0,0-12.552,4.663-18.223,23.9H116.157z"/>
+                                    </svg>
+                                </div>
+                                <div class="panel-heading uppercase">Bebidas</div>
+                                <div class="panel-body">
+                                    <ul>
+                                        <li>Refrigerante</li>
+                                        <li>Chá da casa</li>
+                                        <li>Bebidas em lata</li>
+                                        <li>Sucos</li>
+                                        <li>Cervejas e Drinks</li>
+                                        <li>Milkshake</li>
+                                        <li>Café expresso</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bl-panel panel panel-default">
+                                <div class="bl-panel-flames">
+                                    <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="116px" height="77px" viewBox="0 0 116.157 77.392" enable-background="new 0 0 116.157 77.392" xml:space="preserve">
+                                        <path d="M116.157,77.392c-6.087-14.299-18.297-24.261-8.245-34.718c0,0-10.969,3.74-11.633,13.759c-0.662,10.033,6.688,14.929,1.886,18.45c-7.195,5.218-31.175-2.022-11.278-24.812c0,0-1.707-22.446-23.435-34.123c0,0,11.123,23.986,0,26.94C46.563,47.382,43.151,18.158,59.469,0c0,0-31.593,9.799-33.505,40.987c-0.898,14.158,5.479,26.87-5.191,27.598c-4.905,0.351-7.077-8.549-2.55-15.093c0,0-12.552,4.663-18.223,23.9H116.157z"/>
+                                    </svg>
+                                </div>
+                                <div class="panel-heading uppercase">Sobremesas</div>
+                                <div class="panel-body">
+                                    <ul>
+                                        <li>Sorvete (01 bola)</li>
+                                        <li>House ice cream</li>
+                                        <li>English brownie</li>
+                                        <li>Classic banana split</li>
+                                        <li>Roller coaster</li>
                                     </ul>
                                 </div>
                             </div>
@@ -297,70 +449,7 @@
                 </div>
             </section>
 
-            <section class="bl-section bl-section-menu-hall">
-                <div class="bl-container-lg">
-                    <h3 id="cardapio" class="uppercase">Burger Lab's Hall da Fama</h3>
-                    <div class="bl-panels row">
-                        <div class="col-xs-12 col-md-6 col-lg-4">
-                            <ul>
-                                <li>
-                                    <img src="images/hall-of-fame-alpha.gif" alt="Super Classic" class="hall-of-fame-super-classic">
-                                    <p>Burger bovino, quejo prato, chutney adocicado de cebola roxa, barbecue e maionese tradicional.</p>
-                                </li>
-                                <li>
-                                    <img src="images/hall-of-fame-alpha.gif" alt="The Highway" class="hall-of-fame-the-highway">
-                                    <p>Burger super secreto, queijo cheddar, bacon, cebola roxa marinada no zeite, alface e maionese fancesa de alho.</p>
-                                </li>
-                                <li>
-                                    <img src="images/hall-of-fame-alpha.gif" alt="Road's Chicken" class="hall-of-fame-roads-chicken">
-                                    <p>Burger de frango empanado, catupiry, falface, tomate e maionese de mostarda.</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-xs-12 col-md-6 col-lg-4">
-                            <ul>
-                                <li>
-                                    <img src="images/hall-of-fame-alpha.gif" alt="The Bronx" class="hall-of-fame-the-bronx">
-                                    <p>Burger bovino, quejo cheddar, bacon, cebola roxa marinada no azeite, saute de cogumelos e maionese tradicional.</p>
-                                </li>
-                                <li>
-                                    <img src="images/hall-of-fame-alpha.gif" alt="Burger Lab Boss" class="hall-of-fame-boss">
-                                    <p>Burger de costela, queijo prato, bacon, alface, tomate e maionese de limão siciliano.</p>
-                                </li>
-                                <li>
-                                    <img src="images/hall-of-fame-alpha.gif" alt="Chicken & Chicken" class="hall-of-fame-chicken-chicken">
-                                    <p>Burger de frango empanado, queijo prato, chutney adocicado de cebola roxa, picles e barbecue.</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-xs-12 col-md-12 col-lg-4 last-column">
-                            <ul>
-                                <li>
-                                    <img src="images/hall-of-fame-alpha.gif" alt="Casanova" class="hall-of-fame-casanova">
-                                    <p>Burger super secreto, queijo prato, geléia de bacon com abacaxi, alface e tomate.</p>
-                                </li>
-                                <li>
-                                    <img src="images/hall-of-fame-alpha.gif" alt="My Precious" class="hall-of-fame-my-precious">
-                                    <p>Burger de costela, queijo cheddar, alface, tomate, chebola roxa marinada no azeite e maionese de ichimi.</p>
-                                </li>
-                                <li>
-                                    <img src="images/hall-of-fame-alpha.gif" alt="Vegetariano" class="hall-of-fame-vegetariano">
-                                    <p>Burger vegetariano, queijo prato, alface, tomate e maionese tradicional.</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <h6>Curtiu nossos Burgers? Convide seus amigos!</h6>
-                    <div class="text-center">
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.burgerlab.com.br/" target="_blank" class="btn btn-lg btn-social btn-facebook">
-                            <i class="fa fa-facebook"></i>
-                            Compartilhar <span class="hidden-xs">com amigos</span>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="bl-section bl-section-gallery">
+            <section class="bl-section bl-section-gallery bl-section-gallery-experience">
                 <div class="bl-container-lg">
                     <h3 id="galeria" class="uppercase">Galeria</h3>
                     <div class="bl-panel panel">
@@ -386,17 +475,6 @@
                             <!-- Gallery - End -->
                         </div>
                     </div>
-                    <div class="bl-panel bl-panel-instagram panel">
-                        <div class="bl-panel-flames">
-                            <svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="116px" height="77px" viewBox="0 0 116.157 77.392" enable-background="new 0 0 116.157 77.392" xml:space="preserve">
-                                <path d="M116.157,77.392c-6.087-14.299-18.297-24.261-8.245-34.718c0,0-10.969,3.74-11.633,13.759c-0.662,10.033,6.688,14.929,1.886,18.45c-7.195,5.218-31.175-2.022-11.278-24.812c0,0-1.707-22.446-23.435-34.123c0,0,11.123,23.986,0,26.94C46.563,47.382,43.151,18.158,59.469,0c0,0-31.593,9.799-33.505,40.987c-0.898,14.158,5.479,26.87-5.191,27.598c-4.905,0.351-7.077-8.549-2.55-15.093c0,0-12.552,4.663-18.223,23.9H116.157z"/>
-                            </svg>
-                        </div>
-                        <div class="panel-heading">#tonaburgerlab<i class="fa fa-lg fa-instagram pull-right hidden-xs"></i></div>
-                        <div class="panel-body">
-                            <div id="instafeed" class="row"></div>
-                        </div>
-                    </div>
                     <h6 class="plus1x-margin-bottom">Quer ver sua foto em nossa galeria?</h6>
                     <p class="text-center plus2x-margin-bottom">Envie a foto do seu Burger com #tonaburgerlab</p>
                     <div class="text-center">
@@ -412,39 +490,9 @@
                 </div>
             </section>
 
-            <section class="bl-section bl-section-addresses">
+            <section class="bl-section bl-section-addresses bl-section-addresses-experience">
                 <div class="bl-container-lg">
                     <h3 id="enderecos" class="uppercase">Endereços</h3>
-                    <div class="bl-address">
-                        <div class="bl-address-table">
-                            <div class="bl-address-burger hidden-xs">
-                                <img src="images/burger.svg" class="burger" alt="Endereço">
-                            </div>
-                            <div class="bl-address-info text-center">
-                                <h5>Burger Lab - Pátio Paulista</h5>
-                                <p>Aberto todos os dias das 11h00 às 22h30 - Praça de Alimentação - Tel.: 11 3191 5270</p>
-                                <p>R. Treze de Maio, 1947 - São Paulo - SP</p>
-                            </div>
-                        </div>
-                        <div class="bl-address-map">
-                            <iframe src="https://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=R.+Treze+de+Maio,+1947+-+S%C3%A3o+Paulo+-+SP&amp;aq=&amp;sll=-23.682804,-46.595546&amp;sspn=0.821239,1.454315&amp;ie=UTF8&amp;hq=&amp;hnear=R.+Treze+de+Maio,+1947+-+Bela+Vista,+S%C3%A3o+Paulo,+01311-300&amp;t=m&amp;ll=-23.570143,-46.643529&amp;spn=0.00236,0.008819&amp;z=16&amp;iwloc=A&amp;output=embed" style="border:0"></iframe>
-                        </div>
-                    </div>
-                    <div class="bl-address">
-                        <div class="bl-address-table">
-                            <div class="bl-address-burger hidden-xs">
-                                <img src="images/burger.svg" class="burger" alt="Endereço">
-                            </div>
-                            <div class="bl-address-info text-center">
-                                <h5>Burger Lab - Shopping Taboão</h5>
-                                <p>Aberto Seg, Qui e Dom - 11:30hs às 22hs - Sex e Sáb das 11:30hs às 23hs - Praça de Alimentação</p>
-                                <p>Rodovia Régis Bittencourt, nº 2.643 - São Paulo - SP</p>
-                            </div>
-                        </div>
-                        <div class="bl-address-map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.7100920893913!2d-46.77772884853874!3d-23.615148169598072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce542203c5c0cb%3A0x9ae91baa6da968bb!2sShopping+Tabo%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1393110559789" style="border:0"></iframe>
-                        </div>
-                    </div>
                     <div class="bl-address">
                         <div class="bl-address-table">
                             <div class="bl-address-burger hidden-xs">

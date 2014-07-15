@@ -71,6 +71,42 @@
 					span {
 						font-family: 'sanchez_light';
 						display: block;
+						font-size: .9em;
+					}
+				}
+			}
+			.bl-panel-body-subtitle {
+				background-color: $orange;
+				color: #FFF;
+				font-family: 'sanchez_regularregular';
+				font-style: italic;
+				background-image: none;
+				margin-top: $mobile-global-padding;
+				margin-left: -($mobile-global-padding / 2);
+				margin-right: -($mobile-global-padding / 2);
+				padding: ($mobile-global-padding / 2);
+			}
+		}
+	}
+}
+
+.bl-section-menu-orange {
+	@include background(url(../images/bg-icons-pattern.png) repeat fixed,
+		radial-gradient($orange, $orange-darker 100%));
+	.bl-panel {
+		.bl-panel-flames {
+			svg {
+				fill: #000;
+			}
+		}
+		.panel-heading {
+			background-color: #000;
+		}
+		.panel-body {
+			ul {
+				li {
+					span {
+						color: #000;
 					}
 				}
 			}
@@ -103,6 +139,34 @@
 						margin-bottom: 0;
 					}
 				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.last-column {
+		> ul {
+			> li {
+				float: left;
+				width: 50%;
+				&:last-child {
+					margin-bottom: 0;
+					p {
+						min-height: 0;
+						padding-bottom: 0;
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		.bl-panel {
+			width: 42.7%;
+			margin-top: 60px !important;
+			margin-bottom: 30px !important;
+			float: right;
+			&:nth-child(odd) {
+				float: left;
 			}
 		}
 	}

@@ -45,34 +45,3 @@
 		}
 	}
 }
-
-@media (min-width: 992px) and (max-width: 1199px) {
-	.last-column {
-		> ul {
-			> li {
-				float: left;
-				width: 50%;
-				&:last-child {
-					margin-bottom: 0;
-					p {
-						min-height: 0;
-						padding-bottom: 0;
-						margin-bottom: 0;
-					}
-				}
-			}
-		}
-	}
-	.last-column {
-		.bl-panel {
-			width: 42.7%;
-			&:first-child {
-				float: left;
-			}
-			&:last-child {
-				float: right;
-				margin-top: $desktop-global-padding !important;
-			}
-		}
-	}
-}

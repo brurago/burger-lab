@@ -66,6 +66,19 @@
 		}
 	}
 }
+.bl-section-gallery-experience {
+	@include background(radial-gradient(#111, #000 100%));
+	.bl-panel {
+		.bl-panel-flames {
+			svg {
+				fill: $orange;
+			}
+		}
+		.panel-heading {
+			background-color: $orange;
+		}
+	}
+}
 
 .owl-gallery, .owl-carousel {
 	@include reset-list;

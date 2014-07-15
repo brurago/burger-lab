@@ -38,6 +38,7 @@
 
 .bl-section-wrap {
 	background-color: $orange;
+	margin-top: $header-main-height;
 	.bl-section {
 		padding-top: $mobile-global-padding;
 		padding-bottom: $mobile-global-padding;
@@ -199,5 +200,11 @@
 	.bl-container-md, .bl-container-lg {
 		padding-left: $desktop-global-padding;
 		padding-right: $desktop-global-padding;
+	}
+}
+
+@media (min-width: 1200px) {
+	.bl-section-wrap {
+		margin-top: 0;
 	}
 }
