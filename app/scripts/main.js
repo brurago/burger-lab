@@ -8,7 +8,7 @@
 
 var offsetHeight = 170;
 
-$('.navbar-nav li a').click(function () {
+$('.navbar-nav li a, .carousel-caption a').click(function () {
 	var scrollPos = $('.bl-section-wrap').find($(this).attr('href')).offset().top - offsetHeight;
 	$('body,html').animate({
 		scrollTop: scrollPos
