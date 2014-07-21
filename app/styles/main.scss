@@ -11,7 +11,7 @@ $fa-font-path: '../../bower_components/font-awesome/fonts/';
 
 @import 'variables.scss';
 
-@import 'elements.scss';
+@import 'global.scss';
 
 @import 'buttons.scss';
 
@@ -22,6 +22,8 @@ $fa-font-path: '../../bower_components/font-awesome/fonts/';
 @import 'menu.scss';
 
 @import 'menu-hall.scss';
+
+@import 'chefs-burger.scss';
 
 @import 'gallery.scss';
 
