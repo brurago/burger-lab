@@ -1,4 +1,4 @@
-// $icon-font-path: '../../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/';
+$icon-font-path: '../../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/';
 $fa-font-path: '../../bower_components/font-awesome/fonts/';
 
 // bower:scss
@@ -24,6 +24,10 @@ $fa-font-path: '../../bower_components/font-awesome/fonts/';
 @import 'menu-hall.scss';
 
 @import 'chefs-burger.scss';
+
+@import 'labstar.scss';
+
+@import 'emporio.scss';
 
 @import 'gallery.scss';
 

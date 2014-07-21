@@ -6,7 +6,7 @@
 
 // Script para criar offset nas ancoras + animação suave na rolagem
 
-var offsetHeight = 170;
+var offsetHeight = 160;
 
 $('.navbar-nav li a, .carousel-caption a').click(function () {
 	var scrollPos = $('.bl-section-wrap').find($(this).attr('href')).offset().top - offsetHeight;
@@ -86,4 +86,9 @@ $(document).ready(function() {
 	feed.run();
 });
 
+// Script para iniciar o Ekko Lightbox
 
+$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+	event.preventDefault();
+	$(this).ekkoLightbox();
+});

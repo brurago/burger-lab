@@ -265,8 +265,7 @@
 					padding: 5px 0;
 					margin: 0 5px;
 					@include border-radius($btn-rounded, $btn-rounded);
-					@include transition-duration(.2s);
-  					@include transition-timing-function(ease-in);
+					@include transition(all 0.2s ease-in-out);
 				}
 				&.active {
 					a {

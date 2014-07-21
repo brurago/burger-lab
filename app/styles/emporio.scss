@@ -1,0 +1,75 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'compass/utilities/general/clearfix';
+@import 'compass/css3/box-shadow';
+
+.bl-section.bl-section-emporio {
+	background-color: #FFF;
+	padding-top: 0;
+	color: #000;
+	> h3 {
+		padding-top: $tablet-global-padding;
+		padding-bottom: $tablet-global-padding;
+		margin-bottom: $tablet-global-padding;
+		margin-top: 0;
+		@include sass-arrow(bottom, 20px, #000, 0, #000);
+		position: relative;
+		z-index: 999;
+	}
+	.bl-container-lg {
+		margin-top: $desktop-global-padding;
+		h5 {
+			text-align: left;
+			font-family: 'sanchez_black_italic';
+			color: #000;
+		}
+		ul {
+			width: 103%;
+			@include reset-spaces;
+			@include reset-list;
+			padding-top: $mobile-global-padding;
+			li {
+				width: 50%;
+				float: left;
+				a {
+					display: block;
+					margin: 0 10px 10px 0;
+					img {
+						width: 100%;
+						height: auto;
+						display: block;
+						@include box-shadow($orange 0 0 0 4px inset);
+					}
+				}
+			}
+		}
+	}
+}
+
+// Media queries
+
+@media (min-width: 600px) {
+	.bl-section.bl-section-emporio {
+		> h3 {
+			padding-top: $desktop-global-padding;
+			padding-bottom: $desktop-global-padding;
+			margin-bottom: $desktop-global-padding;
+			@include sass-arrow(bottom, 40px, #000, 0, #000);
+		}
+		.bl-container-lg {
+			.wrap-emporio {
+				margin-top: $desktop-global-padding;
+			}
+			ul {
+				width: 101.5%;
+			}
+		}
+	}
+}
+
+
+@media (min-width: 1600px) {
+	.bl-section.bl-section-emporio {
+		background-size: 100% auto;
+	}
+}

@@ -1,0 +1,67 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'compass/utilities/general/clearfix';
+
+.bl-section.bl-section-labstar {
+	background-color: #000;
+	padding-top: 0;
+	background: url(../images/background-labstar.jpg) fixed repeat-y top left #000;
+	> h3 {
+		padding-top: $tablet-global-padding;
+		padding-bottom: $tablet-global-padding;
+		margin-top: 0;
+		margin-bottom: $desktop-global-padding;
+		@include sass-arrow(bottom, 20px, $orange, 0, $orange);
+		position: relative;
+		z-index: 999;
+	}
+	.bl-container-lg {
+		margin-top: $desktop-global-padding;
+		h5 {
+			text-align: left;
+			font-family: 'sanchez_black_italic';
+		}
+		ul {
+			width: 103%;
+			@include reset-spaces;
+			@include reset-list;
+			li {
+				width: 50%;
+				float: left;
+				a {
+					display: block;
+					margin: 0 10px 10px 0;
+					img {
+						width: 100%;
+						height: auto;
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Media queries
+
+@media (min-width: 600px) {
+	.bl-section.bl-section-labstar {
+		h3 {
+			padding-top: $desktop-global-padding;
+			padding-bottom: $desktop-global-padding;
+			@include sass-arrow(bottom, 40px, $orange, 0, $orange);
+		}
+		.bl-container-lg {
+			ul {
+				width: 101.5%;
+			}
+		}
+	}
+}
+
+
+@media (min-width: 1600px) {
+	.bl-section.bl-section-labstar {
+		background-size: 100% auto;
+	}
+}
