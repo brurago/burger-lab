@@ -595,14 +595,37 @@
         <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>
         <script src="../bower_components/scrollup/js/jquery.scrollUp.js"></script>
         <script src="../bower_components/owlcarousel/owl-carousel/owl.carousel.js"></script>
+        <script src="../bower_components/ekko-lightbox/dist/ekko-lightbox.js"></script>
         <script src="../bower_components/instafeed.js/instafeed.js"></script>
         <script src="tweetie/tweetie.js"></script>
-        
         <!-- endbuild -->
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
+
+        <script>
+        // Script para iniciar o Instafeed
+            $(document).ready(function() {
+                var feed = new Instafeed({
+                    get: 'tagged',
+                    tagName: 'tonaburgerlab',
+                    clientId: 'd64987e04b084a3b9c13525774dd57b0',
+                    resolution: 'standard_resolution',
+                    limit: 4,
+                    template: '<div class="col-xs-6 col-md-3"><a href="{{link}}" target="_blank"><img src="{{image}}"/></a></div>'
+                });
+                feed.run();
+            });
+        // Script para iniciar Tweetie
+            $(document).ready(function() {
+                $('.tweet').twittie({
+                    dateFormat: '%d/%m/%Y',
+                    template: '<div><i class="fa fa-twitter fa-2x fa-inverse"></i></div> <div>{{screen_name}} {{tweet}}<span>{{date}}</span></div>',
+                    count: 4
+                });
+            });
+        </script>
 
     </body>
 </html>

@@ -12,7 +12,6 @@
         <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="../bower_components/owlcarousel/owl-carousel/owl.carousel.css">
         <link rel="stylesheet" href="../bower_components/owlcarousel/owl-carousel/owl.theme.css">
-        <link rel="stylesheet" href="../bower_components/ekko-lightbox/dist/ekko-lightbox.css">
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
@@ -787,15 +786,24 @@
         <script src="../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>
         <script src="../bower_components/scrollup/js/jquery.scrollUp.js"></script>
         <script src="../bower_components/owlcarousel/owl-carousel/owl.carousel.js"></script>
-        <script src="../bower_components/instafeed.js/instafeed.js"></script>
         <script src="../bower_components/ekko-lightbox/dist/ekko-lightbox.js"></script>
+        <script src="../bower_components/instafeed.js/instafeed.js"></script>
         <script src="tweetie/tweetie.js"></script>
+        <!-- endbuild -->
         
         <!-- endbuild -->
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
+
+        <script>
+        // Script para iniciar o Ekko Lightbox
+            $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+        </script>
 
     </body>
 </html>

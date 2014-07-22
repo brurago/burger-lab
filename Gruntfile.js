@@ -143,7 +143,7 @@ module.exports = function (grunt) {
             all: {
                 options: {
                     run: true,
-                    urls: ['http://<%= connect.test.options.hostname %>:<%= connect.test.options.port %>/index.html']
+                    urls: ['http://<%= connect.test.options.hostname %>:<%= connect.test.options.port %>/*.html']
                 }
             }
         },
@@ -166,7 +166,7 @@ module.exports = function (grunt) {
         // Automatically inject Bower components into the HTML file
         bowerInstall: {
             app: {
-                src: ['<%= config.app %>/index.html'],
+                src: ['<%= config.app %>/*.html'],
                 exclude: ['bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap.js']
             },
             sass: {
@@ -224,7 +224,7 @@ module.exports = function (grunt) {
             options: {
                 dest: '<%= config.dist %>'
             },
-            html: '<%= config.app %>/index.html'
+            html: '<%= config.app %>/*.html'
         },
 
         // Performs rewrites based on rev and the useminPrepare configuration
@@ -427,8 +427,8 @@ module.exports = function (grunt) {
         'modernizr',
         'rev',
         'usemin',
-        'compass'
-        // 'htmlmin'
+        'compass',
+        'htmlmin'
     ]);
 
     grunt.registerTask('default', [

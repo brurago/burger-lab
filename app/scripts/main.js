@@ -1,5 +1,6 @@
 /*global google */
 /*global Instafeed */
+/*global EkkoLightbox */
 /*jshint unused:false*/
 
 'use strict';
@@ -60,35 +61,4 @@ $(document).ready(function() {
 		nav : true,
 		navigationText : ['<i class="fa fa-chevron-left"></i>','<i class="fa fa-chevron-right"></i>']
 	});
-});
-
-// Script para iniciar Tweetie
-
-$(document).ready(function() {
-	$('.tweet').twittie({
-		dateFormat: '%d/%m/%Y',
-		template: '<div><i class="fa fa-twitter fa-2x fa-inverse"></i></div> <div>{{screen_name}} {{tweet}}<span>{{date}}</span></div>',
-		count: 4
-	});
-});
-
-// Script para iniciar o Instafeed
-
-$(document).ready(function() {
-	var feed = new Instafeed({
-	    get: 'tagged',
-	    tagName: 'tonaburgerlab',
-	    clientId: 'd64987e04b084a3b9c13525774dd57b0',
-	    resolution: 'standard_resolution',
-	    limit: 4,
-	    template: '<div class="col-xs-6 col-md-3"><a href="{{link}}" target="_blank"><img src="{{image}}"/></a></div>'
-	});
-	feed.run();
-});
-
-// Script para iniciar o Ekko Lightbox
-
-$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
-	event.preventDefault();
-	$(this).ekkoLightbox();
 });
