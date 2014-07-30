@@ -1,0 +1,192 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'compass/utilities/general/clearfix';
+@import 'compass/css3/box-shadow';
+@import "compass/utilities/sprites";
+@import "icons-payment/*.png";
+@include all-icons-payment-sprites;
+
+.bl-section.bl-section-emporio, .bl-section.bl-section-delivery {
+	background-color: #FFF;
+	padding-top: 0;
+	color: #000;
+	> h3 {
+		padding-top: $tablet-global-padding;
+		padding-bottom: $tablet-global-padding;
+		margin-bottom: $tablet-global-padding;
+		margin-top: 0;
+		@include sass-arrow(bottom, 20px, #151515, 0, #151515);
+		position: relative;
+		z-index: 999;
+	}
+	.bl-container-lg {
+		margin-top: $desktop-global-padding;
+		h5 {
+			text-align: left;
+			font-family: 'sanchez_black_italic';
+			color: #000;
+		}
+		.wrap-emporio > ul {
+			width: 103%;
+			@include reset-spaces;
+			@include reset-list;
+			padding-top: $mobile-global-padding;
+			li {
+				width: 50%;
+				float: left;
+				a {
+					display: block;
+					margin: 0 10px 10px 0;
+					img {
+						width: 100%;
+						height: auto;
+						display: block;
+						@include box-shadow($orange 0 0 0 4px inset);
+					}
+				}
+			}
+		}
+		.wrap-delivery {
+			text-align: center;
+		}
+		.wrap-delivery-map {
+			h5 {
+				text-align: center;
+			}
+		}
+		.bl-motoboy {
+			display: inline-block;
+			img, span {
+				display: inline-block;
+				vertical-align: top;
+			}
+			> span {
+				margin: .6em 0 0 .6em;
+				font-size: 2em;
+				font-size: 6vw;
+				font-family: 'sanchez_bold';
+				height: 100px;
+			}
+		}
+		.bl-phone {
+			font-size: 3.75em;
+			font-size: 8vw;
+			font-family: 'sanchez_bold';
+			color: $orange;
+			text-align: center;
+		}
+		.bl-delivery-info {
+			font-size: 1em;
+			font-family: 'sanchez_regularregular';
+			p {
+				margin-top: 1em;
+				margin-bottom: 1em;
+			}
+			strong {
+				font-family: 'sanchez_bold';
+			}
+			i {
+				font-size: .9em;
+			}
+			ul {
+				@include reset-spaces;
+				@include reset-list;
+				max-width: 700px;
+				margin: 0 auto;
+				li {
+					width: 15%;
+					display: inline-block;
+					img {
+						width: 100%;
+						background-size: 100% auto;
+						&.icons-payment-sodexo {
+							background-position: 0 80%;
+						}
+						&.icons-payment-diners-club {
+							background-position: 0 40%;
+						}
+						&.icons-payment-ticket-restaurante {
+							background-position: 0 60%;
+						}
+						&.icons-payment-visa {
+							background-position: 0 100%;
+						}
+						&.icons-payment-american-express {
+							background-position: 0 20%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// Media queries
+
+@media (min-width: 600px) {
+	.bl-section.bl-section-emporio, .bl-section.bl-section-delivery {
+		> h3 {
+			padding-top: $desktop-global-padding;
+			padding-bottom: $desktop-global-padding;
+			margin-bottom: $desktop-global-padding;
+			@include sass-arrow(bottom, 40px, #151515, 0, #151515);
+		}
+		.bl-container-lg {
+			.wrap-emporio, .wrap-delivery {
+				margin-top: $desktop-global-padding;
+			}
+			.wrap-emporio > ul {
+				width: 101.5%;
+			}
+			.bl-delivery-info {
+				font-size: 1.875em;
+				i {
+					font-size: .5em;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.bl-section.bl-section-emporio, .bl-section.bl-section-delivery {
+		.bl-container-lg {
+			.wrap-emporio, .wrap-delivery {
+				text-align: left;
+			}
+			.wrap-delivery-map {
+				margin-top: 2em;
+				h5 {
+					text-align: left;
+				}
+			}
+			.bl-motoboy {
+				> span {
+					font-size: 2.5em;
+					font-size: 2.5vw;
+				}
+			}
+			.bl-phone {
+				font-size: 3.75em;
+				font-size: 3.4vw;
+				text-align: left;
+			}	
+		}
+	}
+}
+
+
+@media (min-width: 1600px) {
+	.bl-section.bl-section-emporio, .bl-section.bl-section-delivery {
+		background-size: 100% auto;
+		.bl-container-lg {
+			.bl-motoboy {
+				> span {
+					font-size: 3em;
+					font-size: 2.2vw;
+				}
+			}
+		}
+	}
+}
