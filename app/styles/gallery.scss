@@ -14,7 +14,7 @@
 		background-color: #FFF;
 		position: relative;
 		text-align: left;
-		margin-top: ($desktop-global-padding + $mobile-global-padding);
+		margin-top: $desktop-global-padding;
 		.bl-panel-flames {
 			position: absolute;
 			top: -55px;
