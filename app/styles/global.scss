@@ -55,7 +55,7 @@
 		}
 		h3 {
 			font-size: $mobile-font-size;
-			margin: ($mobile-global-padding * 2) 0;
+			padding: ($mobile-global-padding * 2) 0;
 		}
 		h4 {
 			font-size: ($mobile-font-size * 0.7);
@@ -132,7 +132,7 @@
 			padding-bottom: $tablet-global-padding;
 			h3 {
 				font-size: $tablet-font-size;
-				margin: ($tablet-global-padding * 2) 0;
+				padding: ($tablet-global-padding * 2) 0;
 			}
 			h4 {
 				font-size: ($tablet-font-size * 0.7);
@@ -161,7 +161,8 @@
 			padding-bottom: $desktop-global-padding;
 			h3 {
 				font-size: $desktop-font-size;
-				margin: ($desktop-global-padding * 2) 0;
+				padding-top: $desktop-global-padding;
+				padding-bottom: $desktop-global-padding;
 			}
 			h4 {
 				font-size: ($desktop-font-size * 0.7);
@@ -169,7 +170,7 @@
 			}
 			h5 {
 				font-size: ($desktop-font-size * 0.5);
-				margin: $desktop-global-padding 0;
+				margin: $desktop-global-padding 0 ($desktop-global-padding - $mobile-global-padding) 0;
 			}
 			h6 {
 				font-size: ($desktop-font-size * 0.45);
