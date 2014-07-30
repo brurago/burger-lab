@@ -5,17 +5,44 @@
 
 'use strict';
 
-// Script para criar offset nas ancoras + animação suave na rolagem
+// Scripts para criar offset nas ancoras + animação suave na rolagem
 
-var offsetHeight = 160;
+var offsetHeightMobile = 80;
+var offsetHeightDesktop = 155;
+var mobileScreen = matchMedia('(max-width:1199px)');
+var desktopScreen = matchMedia('(min-width:1200px)');
 
-$('.navbar-nav li a, .carousel-caption a').click(function () {
-	var scrollPos = $('.bl-section-wrap').find($(this).attr('href')).offset().top - offsetHeight;
-	$('body,html').animate({
-		scrollTop: scrollPos
-	}, 500);
-	return false;
-});
+	// Mobile
+
+var offsetScrollMobile = function () {
+	if (mobileScreen.matches) {
+		$('.navbar-nav li a, .carousel-caption a').click(function () {
+			var scrollPos = $('.bl-section-wrap').find($(this).attr('href')).offset().top - offsetHeightMobile;
+			$('body,html').animate({
+				scrollTop: scrollPos
+			}, 1500);
+			return false;
+		});
+	}
+};
+
+offsetScrollMobile();
+
+	// Desktop
+
+var offsetScrollDesktop = function () {
+	if (desktopScreen.matches) {
+		$('.navbar-nav li a, .carousel-caption a').click(function () {
+			var scrollPos = $('.bl-section-wrap').find($(this).attr('href')).offset().top - offsetHeightDesktop;
+			$('body,html').animate({
+				scrollTop: scrollPos
+			}, 1500);
+			return false;
+		});
+	}
+};
+
+offsetScrollDesktop();
 
 // Script para gerar o botão de scrollup
 
