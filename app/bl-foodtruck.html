@@ -374,16 +374,34 @@
                         <div class="panel-heading uppercase">Nossos Burgers</div>
                         <div class="panel-body">
                             <!-- Gallery -->
-                            <ul class="owl-gallery">
-                                <li><img src="images/gallery-photo-burger-07.jpg" alt=""></li>
-                                <li><img src="images/gallery-photo-burger-08.jpg" alt=""></li>
-                                <li><img src="images/gallery-photo-burger-09.jpg" alt=""></li>
-                                <li><img src="images/gallery-photo-burger-10.jpg" alt=""></li>
-                                <li><img src="images/gallery-photo-burger-02.jpg" alt=""></li>
-                                <li><img src="images/gallery-photo-burger-03.jpg" alt=""></li>
-                                <li><img src="images/gallery-photo-burger-04.jpg" alt=""></li>
-                                <li><img src="images/gallery-photo-burger-05.jpg" alt=""></li>
-                                <li><img src="images/gallery-photo-burger-06.jpg" alt=""></li>
+                            <ul class="owl-gallery wrap-gallery">
+                                <li>
+                                    <a href="images/gallery-photo-burger-07.jpg" class="bl-img-border" data-toggle="lightbox" data-gallery="gallery" data-footer="Legenda do burguer" data-parent=".wrap-gallery"><img src="images/gallery-photo-burger-07.jpg" alt="Legenda do burguer"></a>
+                                </li>
+                                <li>
+                                    <a href="images/gallery-photo-burger-08.jpg" class="bl-img-border" data-toggle="lightbox" data-gallery="gallery" data-footer="Legenda do burguer" data-parent=".wrap-gallery"><img src="images/gallery-photo-burger-08.jpg" alt="Legenda do burguer"></a>
+                                </li>
+                                <li>
+                                    <a href="images/gallery-photo-burger-09.jpg" class="bl-img-border" data-toggle="lightbox" data-gallery="gallery" data-footer="Legenda do burguer" data-parent=".wrap-gallery"><img src="images/gallery-photo-burger-09.jpg" alt="Legenda do burguer"></a>
+                                </li>
+                                <li>
+                                    <a href="images/gallery-photo-burger-10.jpg" class="bl-img-border" data-toggle="lightbox" data-gallery="gallery" data-footer="Legenda do burguer" data-parent=".wrap-gallery"><img src="images/gallery-photo-burger-10.jpg" alt="Legenda do burguer"></a>
+                                </li>
+                                <li>
+                                    <a href="images/gallery-photo-burger-02.jpg" class="bl-img-border" data-toggle="lightbox" data-gallery="gallery" data-footer="Legenda do burguer" data-parent=".wrap-gallery"><img src="images/gallery-photo-burger-02.jpg" alt="Legenda do burguer"></a>
+                                </li>
+                                <li>
+                                    <a href="images/gallery-photo-burger-03.jpg" class="bl-img-border" data-toggle="lightbox" data-gallery="gallery" data-footer="Legenda do burguer" data-parent=".wrap-gallery"><img src="images/gallery-photo-burger-03.jpg" alt="Legenda do burguer"></a>
+                                </li>
+                                <li>
+                                    <a href="images/gallery-photo-burger-04.jpg" class="bl-img-border" data-toggle="lightbox" data-gallery="gallery" data-footer="Legenda do burguer" data-parent=".wrap-gallery"><img src="images/gallery-photo-burger-04.jpg" alt="Legenda do burguer"></a>
+                                </li>
+                                <li>
+                                    <a href="images/gallery-photo-burger-05.jpg" class="bl-img-border" data-toggle="lightbox" data-gallery="gallery" data-footer="Legenda do burguer" data-parent=".wrap-gallery"><img src="images/gallery-photo-burger-05.jpg" alt="Legenda do burguer"></a>
+                                </li>
+                                <li>
+                                    <a href="images/gallery-photo-burger-06.jpg" class="bl-img-border" data-toggle="lightbox" data-gallery="gallery" data-footer="Legenda do burguer" data-parent=".wrap-gallery"><img src="images/gallery-photo-burger-06.jpg" alt="Legenda do burguer"></a>
+                                </li>
                             </ul>
                             <!-- Gallery - End -->
                         </div>
@@ -529,7 +547,6 @@
         <script src="../bower_components/scrollup/js/jquery.scrollUp.js"></script>
         <script src="../bower_components/owlcarousel/owl-carousel/owl.carousel.js"></script>
         <script src="../bower_components/ekko-lightbox/dist/ekko-lightbox.js"></script>
-        <script src="../bower_components/instafeed.js/instafeed.js"></script>
         <script src="tweetie/tweetie.js"></script>
         <!-- endbuild -->
         
@@ -540,6 +557,11 @@
         <!-- endbuild -->
 
         <script>
+        // Script para iniciar o Ekko Lightbox
+            $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
         // Script para googlemaps
             function initialize() {
                 var mapOptions = {
