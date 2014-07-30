@@ -175,6 +175,7 @@
 @media (min-width: 1200px) {
 	.bl-section-menu {
 		.bl-panels {
+			margin-top: $desktop-global-padding;
 			> div:last-child {
 				.bl-panel {
 					&:first-child {
