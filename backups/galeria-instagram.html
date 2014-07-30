@@ -1,0 +1,28 @@
+<div class="bl-panel bl-panel-instagram panel">
+	<div class="bl-panel-flames">
+		<svg version="1.1" id="Isolation_Mode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="116px" height="77px" viewBox="0 0 116.157 77.392" enable-background="new 0 0 116.157 77.392" xml:space="preserve">
+			<path d="M116.157,77.392c-6.087-14.299-18.297-24.261-8.245-34.718c0,0-10.969,3.74-11.633,13.759c-0.662,10.033,6.688,14.929,1.886,18.45c-7.195,5.218-31.175-2.022-11.278-24.812c0,0-1.707-22.446-23.435-34.123c0,0,11.123,23.986,0,26.94C46.563,47.382,43.151,18.158,59.469,0c0,0-31.593,9.799-33.505,40.987c-0.898,14.158,5.479,26.87-5.191,27.598c-4.905,0.351-7.077-8.549-2.55-15.093c0,0-12.552,4.663-18.223,23.9H116.157z"/>
+		</svg>
+	</div>
+	<div class="panel-heading">#tonaburgerlab<i class="fa fa-lg fa-instagram pull-right hidden-xs"></i></div>
+	<div class="panel-body">
+		<div id="instafeed" class="row"></div>
+	</div>
+</div>
+
+
+<script src="../bower_components/instafeed.js/instafeed.js"></script>
+<script>
+// Script para iniciar o Instafeed
+    $(document).ready(function() {
+        var feed = new Instafeed({
+            get: 'tagged',
+            tagName: 'tonaburgerlab',
+            clientId: 'd64987e04b084a3b9c13525774dd57b0',
+            resolution: 'standard_resolution',
+            limit: 4,
+            template: '<div class="col-xs-6 col-md-3"><a href="{{link}}" target="_blank"><img src="{{image}}"/></a></div>'
+        });
+        feed.run();
+    });
+</script>
