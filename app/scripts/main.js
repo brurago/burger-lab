@@ -1,6 +1,7 @@
 /*global google */
 /*global Instafeed */
 /*global EkkoLightbox */
+/*global WOW */
 /*jshint unused:false*/
 
 'use strict';
@@ -96,4 +97,16 @@ $(document).ready(function() {
 		nav : true,
 		navigationText : ['<i class="fa fa-chevron-left"></i>','<i class="fa fa-chevron-right"></i>']
 	});
+});
+
+// Script para iniciar o WOW JS apenas em Ipad e maiores
+
+$(document).ready(function() {
+	var desktopAnimate = matchMedia('(min-width:768px)');
+	var offsetScrollMobile = function () {
+		if (desktopAnimate.matches) {
+			new WOW().init();
+		}
+	};
+	offsetScrollMobile();
 });
