@@ -5,10 +5,18 @@
 
 'use strict';
 
+// Script para recolher a navegação ao tocar no botão, na versão mobile
+
+$(document).ready(function () {
+	$('.navbar-nav li a').click(function(event) {
+		$('.navbar-collapse').removeClass('in').addClass('collapse');
+	});
+});
+
 // Scripts para criar offset nas ancoras + animação suave na rolagem
 
 var offsetHeightMobile = 80;
-var offsetHeightDesktop = 155;
+var offsetHeightDesktop = 154;
 var mobileScreen = matchMedia('(max-width:1199px)');
 var desktopScreen = matchMedia('(min-width:1200px)');
 
@@ -16,7 +24,7 @@ var desktopScreen = matchMedia('(min-width:1200px)');
 
 var offsetScrollMobile = function () {
 	if (mobileScreen.matches) {
-		$('.navbar-nav li a, .carousel-caption a').click(function () {
+		$('.navbar-nav li a, .carousel-caption a, .bl-header-brand a').click(function () {
 			var scrollPos = $('.bl-section-wrap').find($(this).attr('href')).offset().top - offsetHeightMobile;
 			$('body,html').animate({
 				scrollTop: scrollPos
@@ -32,7 +40,7 @@ offsetScrollMobile();
 
 var offsetScrollDesktop = function () {
 	if (desktopScreen.matches) {
-		$('.navbar-nav li a, .carousel-caption a').click(function () {
+		$('.navbar-nav li a, .carousel-caption a, .bl-header-brand a').click(function () {
 			var scrollPos = $('.bl-section-wrap').find($(this).attr('href')).offset().top - offsetHeightDesktop;
 			$('body,html').animate({
 				scrollTop: scrollPos

@@ -152,6 +152,15 @@
 			.bl-foursquare-title {
 				font-size: 3em;
 			}
+			ul {
+				li {
+					@include dotted-spaced($gray,bottom,10px);
+					color: #000;
+					.fa-twitter {
+						color: #000;
+					}
+				}
+			}
 		}
 	}
 
@@ -283,7 +292,7 @@
 
 @media (min-width: 1200px) {
 	.bl-section-wrap .bl-section-home {
-		padding-top: 145px;
+		padding-top: 130px;
 		.bl-section-home-start {
 			.bl-section-home-twitter, .bl-section-home-foursquare, .bl-section-home-experience {
 				h5 {
