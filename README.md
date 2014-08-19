@@ -1,12 +1,12 @@
 Burger-lab Front-end
 ====================
-###Novo projeto usando super poderes :O
+###Novo projeto usando superpoderes :O
 
 Codificado, testado e documentado por Bruno Rocha Agostinho (bruno@magnadev.com.br)
 
 ---
 
-##Super poderes utilizados:
+##Superpoderes utilizados:
    - [Yeoman]
    - [Bower]
    - [Grunt]
@@ -49,16 +49,17 @@ Codificado, testado e documentado por Bruno Rocha Agostinho (bruno@magnadev.com.
     grunt serve
     ```
 
-- "Build" a aplicação utilizando o comando
+- "Builde" a aplicação utilizando o comando
 
      ```sh
     grunt build
     ```
 
-[Yeoman]:http://yeoman.io/
-[Bower]:http://bower.io/
-[Grunt]:http://gruntjs.com/
-[Sass]:https://www.google.com.br/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CC0QFjAA&url=http%3A%2F%2Fsass-lang.com%2F&ei=5WNhU7jFHa238gGB1IEI&usg=AFQjCNGj26Uvw2Xaq_ZQbByTuIQsbFtzjA&sig2=rIvqmROZEzOFlSEikphaGg&bvm=bv.65636070,d.b2U
-[Compass]:https://www.google.com.br/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CC0QFjAA&url=http%3A%2F%2Fcompass-style.org%2F&ei=82NhU6PfKNHisASB9ID4CA&usg=AFQjCNH2Ew4UJ8Zvw_2eQjVN5oEsjcLWQg&sig2=5CG_zRfZ6UFqPJEpqyciEA&bvm=bv.65636070,d.cWc
+[Yeoman]:http://yeoman.io
+[Bower]:http://bower.io
+[Grunt]:http://gruntjs.com
+[Sass]:http://sass-lang.com
+[Compass]:http://compass-style.org
 [NodeJS]:http://nodejs.org
 [Ruby]:http://rubyinstaller.org
+[Bootstrap SASS oficial edition]:https://github.com/twbs/bootstrap-sass
