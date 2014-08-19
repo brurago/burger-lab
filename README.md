@@ -1,6 +1,6 @@
 Burger-lab Front-end
 ====================
-###Novo projeto usando superpoderes :O
+###Novo projeto usando superpoderes :D
 
 Codificado, testado e documentado por Bruno Rocha Agostinho (bruno@magnadev.com.br)
 
@@ -17,8 +17,7 @@ Codificado, testado e documentado por Bruno Rocha Agostinho (bruno@magnadev.com.
 ###Etapas de instalação no `windows`
 
    - Baixar e instalar [NodeJS]
-   - Baixar e instalar [Ruby]
-         certifique-se de selecionar as três opções do instalador para adicionar o Ruby no PATH do terminal
+   - Baixar e instalar [Ruby], certifique-se de selecionar as três opções do instalador para adicionar o Ruby no PATH do terminal
    - Executar no `gitbash` os comandos `gem update --system` e `gem install compass`
    - Instalar `bower` utilizando o comando `npm install -g bower`
    - Instalar `grunt` utilizando o comando `npm install -g grunt`
