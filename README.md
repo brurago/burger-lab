@@ -1,6 +1,6 @@
 Burger-lab Front-end
 ====================
-###Novo projeto usando superpoderes :O
+###Novo projeto usando superpoderes :D
 
 Codificado, testado e documentado por Bruno Rocha Agostinho (bruno@magnadev.com.br)
 
